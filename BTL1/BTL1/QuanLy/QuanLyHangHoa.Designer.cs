@@ -53,6 +53,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -72,6 +74,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.btnClear);
             this.groupBox2.Controls.Add(this.btnFix);
@@ -89,16 +92,16 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(409, 17);
+            this.btnSearch.Location = new System.Drawing.Point(409, 15);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(91, 23);
+            this.btnSearch.Size = new System.Drawing.Size(91, 28);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(804, 16);
+            this.btnClear.Location = new System.Drawing.Point(686, 16);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(84, 27);
@@ -108,7 +111,7 @@
             // 
             // btnFix
             // 
-            this.btnFix.Location = new System.Drawing.Point(684, 16);
+            this.btnFix.Location = new System.Drawing.Point(596, 16);
             this.btnFix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFix.Name = "btnFix";
             this.btnFix.Size = new System.Drawing.Size(84, 27);
@@ -118,7 +121,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(564, 16);
+            this.btnAdd.Location = new System.Drawing.Point(506, 15);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(84, 27);
@@ -145,6 +148,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtDonVi);
             this.groupBox1.Controls.Add(this.txtGiaBan);
             this.groupBox1.Controls.Add(this.txtGiaNhap);
@@ -309,6 +313,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã hàng: ";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(596, 204);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Xác nhận";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(804, 15);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(84, 28);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Thoát";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // QuanLyHangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -358,5 +380,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
