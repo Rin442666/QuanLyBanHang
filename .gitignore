@@ -52,3 +52,7 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Bỏ qua thư mục tạm của Visual Studio
+.vs/
+BTL1/.vs/
