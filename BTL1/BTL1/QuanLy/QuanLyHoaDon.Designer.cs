@@ -131,10 +131,11 @@
             this.groupBox2.Size = new System.Drawing.Size(489, 57);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chọn loại hóa đơn";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(171, 10);
+            this.button4.Location = new System.Drawing.Point(248, 22);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(170, 27);
@@ -144,10 +145,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(15, 8);
+            this.button3.Location = new System.Drawing.Point(56, 22);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 27);
+            this.button3.Size = new System.Drawing.Size(170, 27);
             this.button3.TabIndex = 0;
             this.button3.Text = "Hóa đơn bán";
             this.button3.UseVisualStyleBackColor = true;

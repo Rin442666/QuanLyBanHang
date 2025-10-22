@@ -173,7 +173,7 @@
             // 
             // txtDonVi
             // 
-            this.txtDonVi.Location = new System.Drawing.Point(436, 157);
+            this.txtDonVi.Location = new System.Drawing.Point(436, 161);
             this.txtDonVi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDonVi.Name = "txtDonVi";
             this.txtDonVi.Size = new System.Drawing.Size(112, 27);
@@ -181,7 +181,7 @@
             // 
             // txtGiaBan
             // 
-            this.txtGiaBan.Location = new System.Drawing.Point(436, 95);
+            this.txtGiaBan.Location = new System.Drawing.Point(436, 103);
             this.txtGiaBan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.Size = new System.Drawing.Size(112, 27);
@@ -198,16 +198,17 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(341, 165);
+            this.label7.Location = new System.Drawing.Point(328, 165);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 19);
             this.label7.TabIndex = 8;
             this.label7.Text = "Đơn vị tính:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(336, 103);
+            this.label6.Location = new System.Drawing.Point(328, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 19);
             this.label6.TabIndex = 7;
@@ -293,7 +294,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 103);
+            this.label2.Location = new System.Drawing.Point(28, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 19);
             this.label2.TabIndex = 1;
@@ -302,7 +303,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 43);
+            this.label1.Location = new System.Drawing.Point(30, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 19);
             this.label1.TabIndex = 0;

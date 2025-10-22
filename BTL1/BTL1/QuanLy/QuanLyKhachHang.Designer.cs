@@ -130,7 +130,7 @@
             // 
             // txtTongTieuDung
             // 
-            this.txtTongTieuDung.Location = new System.Drawing.Point(649, 116);
+            this.txtTongTieuDung.Location = new System.Drawing.Point(611, 119);
             this.txtTongTieuDung.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTongTieuDung.Name = "txtTongTieuDung";
             this.txtTongTieuDung.Size = new System.Drawing.Size(168, 27);
@@ -138,7 +138,7 @@
             // 
             // txtAccount
             // 
-            this.txtAccount.Location = new System.Drawing.Point(649, 73);
+            this.txtAccount.Location = new System.Drawing.Point(611, 76);
             this.txtAccount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(168, 27);
@@ -146,7 +146,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(649, 27);
+            this.txtPhone.Location = new System.Drawing.Point(611, 29);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(168, 27);
@@ -162,7 +162,7 @@
             // 
             // txtHoVaTen
             // 
-            this.txtHoVaTen.Location = new System.Drawing.Point(179, 71);
+            this.txtHoVaTen.Location = new System.Drawing.Point(179, 76);
             this.txtHoVaTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHoVaTen.Name = "txtHoVaTen";
             this.txtHoVaTen.Size = new System.Drawing.Size(203, 27);
@@ -171,7 +171,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(503, 122);
+            this.label7.Location = new System.Drawing.Point(486, 122);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(114, 19);
             this.label7.TabIndex = 4;
@@ -179,7 +179,7 @@
             // 
             // txtMaKH
             // 
-            this.txtMaKH.Location = new System.Drawing.Point(179, 32);
+            this.txtMaKH.Location = new System.Drawing.Point(179, 29);
             this.txtMaKH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(203, 27);
@@ -188,7 +188,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(503, 79);
+            this.label5.Location = new System.Drawing.Point(486, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 19);
             this.label5.TabIndex = 4;
@@ -197,7 +197,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(513, 32);
+            this.label4.Location = new System.Drawing.Point(486, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 19);
             this.label4.TabIndex = 3;
@@ -206,7 +206,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(107, 119);
+            this.label3.Location = new System.Drawing.Point(56, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 19);
             this.label3.TabIndex = 2;
@@ -215,7 +215,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(92, 71);
+            this.label2.Location = new System.Drawing.Point(56, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 19);
             this.label2.TabIndex = 1;
