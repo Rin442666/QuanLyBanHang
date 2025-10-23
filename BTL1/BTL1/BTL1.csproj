@@ -185,6 +185,8 @@
   <ItemGroup>
     <None Include="Resources\istockphoto-1435513729-612x612-removebg-preview.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Database\QuanLyBanHang.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
