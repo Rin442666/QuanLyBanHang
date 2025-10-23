@@ -31,5 +31,21 @@ namespace BTL1
         {
 
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Main mainForm = (Main)this.ParentForm;
+            mainForm.ShowHome();
+        }
     }
 }

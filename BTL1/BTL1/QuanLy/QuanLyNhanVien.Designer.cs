@@ -94,6 +94,7 @@
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(209, 27);
             this.txtMail.TabIndex = 8;
+            this.txtMail.TextChanged += new System.EventHandler(this.txtMail_TextChanged);
             // 
             // txtPhone
             // 
@@ -126,6 +127,7 @@
             this.txtMaNhanVien.Name = "txtMaNhanVien";
             this.txtMaNhanVien.Size = new System.Drawing.Size(195, 27);
             this.txtMaNhanVien.TabIndex = 5;
+            this.txtMaNhanVien.TextChanged += new System.EventHandler(this.txtMaNhanVien_TextChanged);
             // 
             // label7
             // 
@@ -249,6 +251,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Thêm ";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label6
             // 
