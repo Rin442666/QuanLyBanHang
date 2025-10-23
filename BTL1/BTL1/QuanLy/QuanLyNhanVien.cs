@@ -24,7 +24,9 @@ namespace BTL1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Main mainForm = (Main)this.ParentForm;
+            mainForm.Home(true);
+            this.Close();
         }
     }
 }

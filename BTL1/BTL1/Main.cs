@@ -14,8 +14,8 @@ namespace BTL1
     {
         private void LoadForm(Form form)
         {
-            // Xóa form cũ trong panel
-            panel1.Controls.Clear();
+            // Ẩn UI chính
+            Home(false);
 
             // Thiết lập form con
             form.TopLevel = false;
@@ -66,5 +66,16 @@ namespace BTL1
             LoadForm(new QuanLyHangHoa());
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public void Home(bool Visible )
+        {
+            panel3.Visible = Visible;
+            panel2.Visible = Visible;
+            gbxChucNang.Visible = Visible;
+        }
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.gbxChucNang = new System.Windows.Forms.GroupBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnQLHD = new System.Windows.Forms.Button();
             this.btnQLNV = new System.Windows.Forms.Button();
             this.btnQLKH = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbxChucNang.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -55,7 +55,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.gbxChucNang);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -65,29 +65,30 @@
             this.panel1.Size = new System.Drawing.Size(910, 494);
             this.panel1.TabIndex = 0;
             // 
-            // groupBox1
+            // gbxChucNang
             // 
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.btnQLHD);
-            this.groupBox1.Controls.Add(this.btnQLNV);
-            this.groupBox1.Controls.Add(this.btnQLKH);
-            this.groupBox1.Controls.Add(this.btnQLHH);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 193);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(910, 301);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Chức năng:";
+            this.gbxChucNang.Controls.Add(this.btnClose);
+            this.gbxChucNang.Controls.Add(this.btnQLHD);
+            this.gbxChucNang.Controls.Add(this.btnQLNV);
+            this.gbxChucNang.Controls.Add(this.btnQLKH);
+            this.gbxChucNang.Controls.Add(this.btnQLHH);
+            this.gbxChucNang.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gbxChucNang.Location = new System.Drawing.Point(0, 193);
+            this.gbxChucNang.Name = "gbxChucNang";
+            this.gbxChucNang.Size = new System.Drawing.Size(910, 301);
+            this.gbxChucNang.TabIndex = 3;
+            this.gbxChucNang.TabStop = false;
+            this.gbxChucNang.Text = "Chức năng:";
             // 
-            // button7
+            // btnClose
             // 
-            this.button7.Location = new System.Drawing.Point(794, 269);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(116, 32);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Thoát";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnClose.Location = new System.Drawing.Point(794, 269);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(116, 32);
+            this.btnClose.TabIndex = 6;
+            this.btnClose.Text = "Thoát";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnQLHD
             // 
@@ -270,7 +271,7 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.gbxChucNang.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -289,12 +290,12 @@
         private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblTieuDeMain;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxChucNang;
         private System.Windows.Forms.Button btnQLHD;
         private System.Windows.Forms.Button btnQLNV;
         private System.Windows.Forms.Button btnQLKH;
         private System.Windows.Forms.Button btnQLHH;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

@@ -30,6 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -67,7 +67,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnBack);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txtSearch);
@@ -79,6 +79,16 @@
             this.groupBox2.Size = new System.Drawing.Size(900, 87);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(782, 38);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Thoát";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnSearch
             // 
@@ -234,15 +244,6 @@
             this.label1.Text = "Mã khách hàng:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(782, 38);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // QuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -286,6 +287,6 @@
         private System.Windows.Forms.TextBox txtTongTieuDung;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

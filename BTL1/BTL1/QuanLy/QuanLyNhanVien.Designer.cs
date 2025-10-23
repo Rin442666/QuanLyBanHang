@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.txtAccount = new System.Windows.Forms.TextBox();
             this.txtMail = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -42,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnFix = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -81,6 +81,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhân viên";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(803, 124);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 28);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Xác nhận";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // txtAccount
             // 
@@ -198,7 +207,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnBack);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.btnClear);
             this.groupBox2.Controls.Add(this.btnFix);
@@ -214,6 +223,16 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(786, 24);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(85, 28);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Thoát";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSearch
             // 
@@ -285,25 +304,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(900, 282);
             this.dataGridView1.TabIndex = 2;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(786, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 28);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(803, 124);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 28);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Xác nhận";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // QuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -349,7 +349,7 @@
         private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button2;
     }
 }
