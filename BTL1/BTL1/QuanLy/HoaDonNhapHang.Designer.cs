@@ -60,7 +60,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(881, 100);
+            this.groupBox1.Size = new System.Drawing.Size(919, 100);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
@@ -130,7 +130,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 10.2F);
             this.groupBox2.Location = new System.Drawing.Point(0, 100);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(881, 32);
+            this.groupBox2.Size = new System.Drawing.Size(919, 32);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết hóa đơn";
@@ -143,7 +143,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(881, 421);
+            this.dataGridView1.Size = new System.Drawing.Size(919, 421);
             this.dataGridView1.TabIndex = 2;
             // 
             // panel1
@@ -155,7 +155,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 483);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(881, 70);
+            this.panel1.Size = new System.Drawing.Size(919, 70);
             this.panel1.TabIndex = 0;
             // 
             // textBox3
@@ -172,7 +172,7 @@
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(702, 9);
+            this.button4.Location = new System.Drawing.Point(740, 9);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(167, 49);
             this.button4.TabIndex = 2;
@@ -194,7 +194,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 553);
+            this.ClientSize = new System.Drawing.Size(919, 553);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);

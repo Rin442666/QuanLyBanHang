@@ -77,5 +77,10 @@ namespace BTL1
             panel2.Visible = Visible;
             gbxChucNang.Visible = Visible;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
