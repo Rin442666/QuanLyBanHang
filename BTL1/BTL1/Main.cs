@@ -65,5 +65,6 @@ namespace BTL1
         {
             LoadForm(new QuanLyHangHoa());
         }
+
     }
 }
