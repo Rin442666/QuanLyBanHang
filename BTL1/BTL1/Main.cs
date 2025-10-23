@@ -12,6 +12,20 @@ namespace BTL1
 {
     public partial class Main : Form
     {
+        private void LoadForm(Form form)
+        {
+            // Xóa form cũ trong panel
+            panel1.Controls.Clear();
+
+            // Thiết lập form con
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            // Thêm vào panel
+            panel1.Controls.Add(form);
+            form.Show();
+        }
         public Main()
         {
             InitializeComponent();
@@ -30,6 +44,26 @@ namespace BTL1
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnQLHD_Click(object sender, EventArgs e)
+        {
+            LoadForm(new QuanLyHoaDon());
+        }
+
+        private void btnQLKH_Click(object sender, EventArgs e)
+        {
+            LoadForm(new QuanLyKhachHang());
+        }
+
+        private void btnQLNV_Click(object sender, EventArgs e)
+        {
+            LoadForm(new QuanLyNhanVien());
+        }
+
+        private void btnQLHH_Click(object sender, EventArgs e)
+        {
+            LoadForm(new QuanLyHangHoa());
         }
     }
 }
