@@ -84,9 +84,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(803, 124);
+            this.button2.Location = new System.Drawing.Point(808, 66);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 28);
+            this.button2.Size = new System.Drawing.Size(85, 47);
             this.button2.TabIndex = 10;
             this.button2.Text = "Xác nhận";
             this.button2.UseVisualStyleBackColor = true;
@@ -226,7 +226,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(786, 24);
+            this.btnBack.Location = new System.Drawing.Point(803, 24);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(85, 28);
             this.btnBack.TabIndex = 7;
@@ -236,16 +236,17 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(416, 24);
+            this.btnSearch.Location = new System.Drawing.Point(350, 23);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(85, 28);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(694, 24);
+            this.btnClear.Location = new System.Drawing.Point(673, 24);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(85, 28);
@@ -255,7 +256,7 @@
             // 
             // btnFix
             // 
-            this.btnFix.Location = new System.Drawing.Point(601, 24);
+            this.btnFix.Location = new System.Drawing.Point(580, 24);
             this.btnFix.Margin = new System.Windows.Forms.Padding(4);
             this.btnFix.Name = "btnFix";
             this.btnFix.Size = new System.Drawing.Size(85, 28);
@@ -265,7 +266,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(508, 24);
+            this.btnAdd.Location = new System.Drawing.Point(487, 23);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 28);
@@ -277,7 +278,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.label6.Location = new System.Drawing.Point(59, 27);
+            this.label6.Location = new System.Drawing.Point(31, 27);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 19);
@@ -286,17 +287,17 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(179, 24);
+            this.txtSearch.Location = new System.Drawing.Point(118, 24);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(195, 27);
+            this.txtSearch.Size = new System.Drawing.Size(202, 27);
             this.txtSearch.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 253);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 245);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;

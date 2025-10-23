@@ -28,5 +28,10 @@ namespace BTL1
             mainForm.Home(true);
             this.Close();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

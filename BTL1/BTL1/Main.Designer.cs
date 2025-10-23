@@ -43,7 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTieuDeMain = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTenTK = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblTen = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -191,7 +192,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+
             // 
             // label1
             // 
@@ -218,44 +219,56 @@
             // panel2
             // 
             this.panel2.AutoSize = true;
-            this.panel2.Controls.Add(this.lblTenTK);
+            this.panel2.Controls.Add(this.lblUserName);
+            this.panel2.Controls.Add(this.lblTen);
             this.panel2.Controls.Add(this.btnLogOut);
             this.panel2.Controls.Add(this.btnLogIn);
-            this.panel2.Location = new System.Drawing.Point(508, 143);
+            this.panel2.Location = new System.Drawing.Point(407, 143);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(396, 55);
+            this.panel2.Size = new System.Drawing.Size(497, 55);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // lblTenTK
+            // lblUserName
             // 
-            this.lblTenTK.AutoSize = true;
-            this.lblTenTK.Location = new System.Drawing.Point(29, 21);
-            this.lblTenTK.Name = "lblTenTK";
-            this.lblTenTK.Size = new System.Drawing.Size(34, 19);
-            this.lblTenTK.TabIndex = 2;
-            this.lblTenTK.Text = "Tên";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Location = new System.Drawing.Point(90, 22);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(0, 19);
+            this.lblUserName.TabIndex = 3;
+            // 
+            // lblTen
+            // 
+            this.lblTen.AutoSize = true;
+            this.lblTen.Location = new System.Drawing.Point(29, 21);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.Size = new System.Drawing.Size(47, 19);
+            this.lblTen.TabIndex = 2;
+            this.lblTen.Text = "Tên : ";
+            this.lblTen.Visible = false;
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(298, 11);
+            this.btnLogOut.Location = new System.Drawing.Point(387, 11);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(94, 40);
             this.btnLogOut.TabIndex = 1;
             this.btnLogOut.Text = "Đăng Xuất";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnLogIn
             // 
-            this.btnLogIn.Location = new System.Drawing.Point(190, 11);
+            this.btnLogIn.Location = new System.Drawing.Point(277, 11);
             this.btnLogIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(101, 40);
             this.btnLogIn.TabIndex = 0;
             this.btnLogIn.Text = "Đăng Nhập";
             this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // Main
             // 
@@ -286,7 +299,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblTenTK;
+        private System.Windows.Forms.Label lblTen;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.Panel panel3;
@@ -302,5 +315,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUserName;
     }
 }

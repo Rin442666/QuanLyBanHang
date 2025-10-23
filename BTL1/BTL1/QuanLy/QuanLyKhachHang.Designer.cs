@@ -82,9 +82,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(782, 38);
+            this.btnBack.Location = new System.Drawing.Point(795, 50);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(93, 30);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "Thoát";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@
             this.txtSearch.Location = new System.Drawing.Point(179, 35);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(203, 27);
+            this.txtSearch.Size = new System.Drawing.Size(262, 27);
             this.txtSearch.TabIndex = 0;
             // 
             // groupBox1

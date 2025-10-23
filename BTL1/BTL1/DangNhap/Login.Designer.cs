@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblMK = new System.Windows.Forms.Label();
-            this.lblTK = new System.Windows.Forms.Label();
-            this.btnOut = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.txtMK = new System.Windows.Forms.TextBox();
-            this.txtTK = new System.Windows.Forms.TextBox();
-            this.lblTieuDeDN = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnGoRegister = new System.Windows.Forms.Button();
+            this.lblTieuDeDN = new System.Windows.Forms.Label();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblTK = new System.Windows.Forms.Label();
+            this.lblMK = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,13 +47,14 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnGoRegister);
             this.panel2.Controls.Add(this.lblTieuDeDN);
-            this.panel2.Controls.Add(this.txtTK);
-            this.panel2.Controls.Add(this.txtMK);
+            this.panel2.Controls.Add(this.txtUser);
+            this.panel2.Controls.Add(this.txtPass);
             this.panel2.Controls.Add(this.btnLogin);
-            this.panel2.Controls.Add(this.btnOut);
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.lblTK);
             this.panel2.Controls.Add(this.lblMK);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -61,37 +62,52 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(470, 539);
             this.panel2.TabIndex = 10;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // lblMK
+            // button1
             // 
-            this.lblMK.AutoSize = true;
-            this.lblMK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMK.Location = new System.Drawing.Point(30, 205);
-            this.lblMK.Name = "lblMK";
-            this.lblMK.Size = new System.Drawing.Size(88, 22);
-            this.lblMK.TabIndex = 1;
-            this.lblMK.Text = "Mật khẩu:";
-            this.lblMK.Click += new System.EventHandler(this.lblMK_Click);
+            this.button1.Location = new System.Drawing.Point(153, 378);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(195, 35);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Quên mật khẩu";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // lblTK
+            // btnGoRegister
             // 
-            this.lblTK.AutoSize = true;
-            this.lblTK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTK.Location = new System.Drawing.Point(30, 141);
-            this.lblTK.Name = "lblTK";
-            this.lblTK.Size = new System.Drawing.Size(94, 22);
-            this.lblTK.TabIndex = 0;
-            this.lblTK.Text = "Tài khoản:";
+            this.btnGoRegister.AutoSize = true;
+            this.btnGoRegister.Location = new System.Drawing.Point(153, 449);
+            this.btnGoRegister.Name = "btnGoRegister";
+            this.btnGoRegister.Size = new System.Drawing.Size(195, 61);
+            this.btnGoRegister.TabIndex = 9;
+            this.btnGoRegister.Text = "Đăng ký";
+            this.btnGoRegister.UseVisualStyleBackColor = true;
+            this.btnGoRegister.Click += new System.EventHandler(this.btnGoRegister_Click);
             // 
-            // btnOut
+            // lblTieuDeDN
             // 
-            this.btnOut.Location = new System.Drawing.Point(290, 315);
-            this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(94, 35);
-            this.btnOut.TabIndex = 6;
-            this.btnOut.Text = "Thoát";
-            this.btnOut.UseVisualStyleBackColor = true;
-            this.btnOut.Click += new System.EventHandler(this.button2_Click);
+            this.lblTieuDeDN.AutoSize = true;
+            this.lblTieuDeDN.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDeDN.Location = new System.Drawing.Point(90, 9);
+            this.lblTieuDeDN.Name = "lblTieuDeDN";
+            this.lblTieuDeDN.Size = new System.Drawing.Size(307, 53);
+            this.lblTieuDeDN.TabIndex = 2;
+            this.lblTieuDeDN.Text = "ĐĂNG NHẬP";
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(143, 140);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(282, 27);
+            this.txtUser.TabIndex = 3;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(143, 204);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(282, 27);
+            this.txtPass.TabIndex = 4;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
@@ -103,40 +119,35 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // txtMK
+            // btnBack
             // 
-            this.txtMK.Location = new System.Drawing.Point(143, 204);
-            this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(282, 27);
-            this.txtMK.TabIndex = 4;
+            this.btnBack.Location = new System.Drawing.Point(290, 315);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(94, 35);
+            this.btnBack.TabIndex = 6;
+            this.btnBack.Text = "Thoát";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // txtTK
+            // lblTK
             // 
-            this.txtTK.Location = new System.Drawing.Point(143, 140);
-            this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(282, 27);
-            this.txtTK.TabIndex = 3;
+            this.lblTK.AutoSize = true;
+            this.lblTK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTK.Location = new System.Drawing.Point(30, 141);
+            this.lblTK.Name = "lblTK";
+            this.lblTK.Size = new System.Drawing.Size(94, 22);
+            this.lblTK.TabIndex = 0;
+            this.lblTK.Text = "Tài khoản:";
             // 
-            // lblTieuDeDN
+            // lblMK
             // 
-            this.lblTieuDeDN.AutoSize = true;
-            this.lblTieuDeDN.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDeDN.Location = new System.Drawing.Point(90, 9);
-            this.lblTieuDeDN.Name = "lblTieuDeDN";
-            this.lblTieuDeDN.Size = new System.Drawing.Size(307, 53);
-            this.lblTieuDeDN.TabIndex = 2;
-            this.lblTieuDeDN.Text = "ĐĂNG NHẬP";
-            this.lblTieuDeDN.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // btnGoRegister
-            // 
-            this.btnGoRegister.AutoSize = true;
-            this.btnGoRegister.Location = new System.Drawing.Point(153, 449);
-            this.btnGoRegister.Name = "btnGoRegister";
-            this.btnGoRegister.Size = new System.Drawing.Size(195, 61);
-            this.btnGoRegister.TabIndex = 9;
-            this.btnGoRegister.Text = "Đăng ký";
-            this.btnGoRegister.UseVisualStyleBackColor = true;
+            this.lblMK.AutoSize = true;
+            this.lblMK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMK.Location = new System.Drawing.Point(30, 205);
+            this.lblMK.Name = "lblMK";
+            this.lblMK.Size = new System.Drawing.Size(88, 22);
+            this.lblMK.TabIndex = 1;
+            this.lblMK.Text = "Mật khẩu:";
             // 
             // panel1
             // 
@@ -159,15 +170,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(153, 378);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 35);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Quên mật khẩu";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
@@ -193,14 +195,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnGoRegister;
         private System.Windows.Forms.Label lblTieuDeDN;
-        private System.Windows.Forms.TextBox txtTK;
-        private System.Windows.Forms.TextBox txtMK;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnOut;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblTK;
         private System.Windows.Forms.Label lblMK;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

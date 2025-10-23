@@ -64,7 +64,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(807, 26);
+            this.btnBack.Location = new System.Drawing.Point(792, 26);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(81, 28);
             this.btnBack.TabIndex = 6;
@@ -77,7 +77,7 @@
             this.button2.Location = new System.Drawing.Point(622, 26);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(169, 28);
+            this.button2.Size = new System.Drawing.Size(113, 28);
             this.button2.TabIndex = 5;
             this.button2.Text = "Xem chi tiết";
             this.button2.UseVisualStyleBackColor = true;
