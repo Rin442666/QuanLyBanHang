@@ -21,20 +21,5 @@ namespace BTL1
         {
 
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMaNhanVien_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

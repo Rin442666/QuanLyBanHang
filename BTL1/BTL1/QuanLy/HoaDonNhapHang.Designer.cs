@@ -43,7 +43,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -52,7 +51,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
@@ -89,7 +87,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(146, 27);
             this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -148,7 +145,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Tìm";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -206,17 +202,6 @@
             this.label5.Size = new System.Drawing.Size(254, 37);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tổng tiền: 0 VNĐ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(756, 32);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 23);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "trang chủ";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // HoaDonNhapHang
             // 
@@ -257,6 +242,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
     }
 }

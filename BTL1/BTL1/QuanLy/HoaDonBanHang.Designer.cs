@@ -70,7 +70,6 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // textBox4
             // 
@@ -232,10 +231,9 @@
             this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(22, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 37);
+            this.label5.Size = new System.Drawing.Size(254, 37);
             this.label5.TabIndex = 0;
-            this.label5.Text = "z";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Text = "Tổng tiền: 0 VNĐ";
             // 
             // HoaDonBanHang
             // 

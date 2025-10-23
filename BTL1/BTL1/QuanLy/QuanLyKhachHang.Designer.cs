@@ -46,7 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -66,7 +65,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txtSearch);
@@ -233,15 +231,6 @@
             this.label1.Text = "Mã khách hàng:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(800, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "trang chủ";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // QuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -285,6 +274,5 @@
         private System.Windows.Forms.TextBox txtTongTieuDung;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button button1;
     }
 }
