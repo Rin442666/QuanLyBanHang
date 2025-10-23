@@ -49,6 +49,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -56,6 +58,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.txtAccount);
             this.groupBox1.Controls.Add(this.txtMail);
             this.groupBox1.Controls.Add(this.txtPhone);
@@ -195,6 +198,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.btnClear);
             this.groupBox2.Controls.Add(this.btnFix);
@@ -222,7 +226,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(779, 24);
+            this.btnClear.Location = new System.Drawing.Point(694, 24);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(85, 28);
@@ -232,7 +236,7 @@
             // 
             // btnFix
             // 
-            this.btnFix.Location = new System.Drawing.Point(672, 24);
+            this.btnFix.Location = new System.Drawing.Point(601, 24);
             this.btnFix.Margin = new System.Windows.Forms.Padding(4);
             this.btnFix.Name = "btnFix";
             this.btnFix.Size = new System.Drawing.Size(85, 28);
@@ -242,7 +246,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(560, 24);
+            this.btnAdd.Location = new System.Drawing.Point(508, 24);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 28);
@@ -280,6 +284,25 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(900, 282);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(786, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 28);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Thoát";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(803, 124);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 28);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Xác nhận";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // QuanLyNhanVien
             // 
@@ -326,5 +349,7 @@
         private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
