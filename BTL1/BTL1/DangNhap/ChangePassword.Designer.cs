@@ -1,4 +1,4 @@
-﻿namespace BTL1.Log
+﻿namespace BTL1.DangNhap
 {
     partial class ChangePassword
     {
@@ -121,6 +121,7 @@
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(317, 27);
             this.txtTK.TabIndex = 3;
+            this.txtTK.TextChanged += new System.EventHandler(this.txtTK_TextChanged);
             // 
             // txtNewPass
             // 

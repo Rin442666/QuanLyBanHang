@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangNhap\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap\ForgotPassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap\ForgotPassWord.Designer.cs">
+      <DependentUpon>ForgotPassWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +114,18 @@
     <Compile Include="QuanLy\QuanLyNhanVien.Designer.cs">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DangNhap\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap\ForgotPassWord.resx">
+      <DependentUpon>ForgotPassWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,8 +185,6 @@
   <ItemGroup>
     <None Include="Resources\istockphoto-1435513729-612x612-removebg-preview.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DangNhap\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

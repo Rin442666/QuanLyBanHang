@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BTL1
+namespace BTL1.DangNhap
 {
     public partial class Login : Form
     {

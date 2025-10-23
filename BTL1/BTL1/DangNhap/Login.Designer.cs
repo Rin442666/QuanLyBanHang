@@ -1,4 +1,4 @@
-﻿namespace BTL1
+﻿namespace BTL1.DangNhap
 {
     partial class Login
     {

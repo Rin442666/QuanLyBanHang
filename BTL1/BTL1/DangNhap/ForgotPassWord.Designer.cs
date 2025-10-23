@@ -1,4 +1,4 @@
-﻿namespace BTL1.Log
+﻿namespace BTL1.DangNhap
 {
     partial class ForgotPassWord
     {
