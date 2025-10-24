@@ -117,7 +117,7 @@ insert into HangHoa values
 insert into NhanVien values
 ('NV01', N'Quản lý', N'Hoàng Đình Hào', N'Bắc Giang', '2005-11-17', 'hoanghao@raumart.vn', '0901234567'),
 ('NV02', N'Nhân viên', N'Hà Văn Hải', N'Thanh Hóa', '2004-04-04', 'hahai@raumart.vn', '0912345678'),
-('NV03', N'Nhân viên', N'Hà Vân Phong', N'Hưng Yên', '2005-12-06', 'vanphong@raumart.vn', '0934567890'),
+('NV03', N'Nhân viên', N'Hà Vân Phong', N'Hưng Yên', '2005-03-22', 'vanphong@raumart.vn', '0934567890'),
 ('NV04', N'Nhân viên', N'Nguyễn Quốc Thịnh', N'Hải Dương', '2005-07-05', 'meleewizard@raumart.vn', '0945678901'),
 ('NV05', N'Nhân viên', N'Lê Duy Gia Bảo', N'Hà Nội', '2005-10-02', 'giabao@raumart.vn', '0903456789'),
 ('NV06', N'Nhân viên', N'Ngô Thế Minh', N'Hà Nam', '2005-05-05', 'theminh@raumart.vn', '0987654321');

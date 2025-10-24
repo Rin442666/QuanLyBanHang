@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnGoRegister = new System.Windows.Forms.Button();
             this.lblTieuDeDN = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -48,8 +46,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.btnGoRegister);
             this.panel2.Controls.Add(this.lblTieuDeDN);
             this.panel2.Controls.Add(this.txtUser);
             this.panel2.Controls.Add(this.txtPass);
@@ -63,26 +59,6 @@
             this.panel2.Size = new System.Drawing.Size(470, 539);
             this.panel2.TabIndex = 10;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(153, 378);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 35);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Quên mật khẩu";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnGoRegister
-            // 
-            this.btnGoRegister.AutoSize = true;
-            this.btnGoRegister.Location = new System.Drawing.Point(153, 449);
-            this.btnGoRegister.Name = "btnGoRegister";
-            this.btnGoRegister.Size = new System.Drawing.Size(195, 61);
-            this.btnGoRegister.TabIndex = 9;
-            this.btnGoRegister.Text = "Đăng ký";
-            this.btnGoRegister.UseVisualStyleBackColor = true;
-            this.btnGoRegister.Click += new System.EventHandler(this.btnGoRegister_Click);
             // 
             // lblTieuDeDN
             // 
@@ -111,9 +87,9 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(102, 315);
+            this.btnLogin.Location = new System.Drawing.Point(180, 319);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(105, 35);
+            this.btnLogin.Size = new System.Drawing.Size(136, 47);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -121,7 +97,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(290, 315);
+            this.btnBack.Location = new System.Drawing.Point(203, 439);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(94, 35);
             this.btnBack.TabIndex = 6;
@@ -193,7 +169,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnGoRegister;
         private System.Windows.Forms.Label lblTieuDeDN;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPass;
@@ -202,7 +177,6 @@
         private System.Windows.Forms.Label lblTK;
         private System.Windows.Forms.Label lblMK;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
