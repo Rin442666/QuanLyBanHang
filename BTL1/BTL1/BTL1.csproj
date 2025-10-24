@@ -203,7 +203,7 @@
     <Content Include="bin\Debug\System.Threading.Tasks.Extensions.xml" />
     <Content Include="bin\Debug\System.ValueTuple.dll" />
     <Content Include="bin\Debug\System.ValueTuple.xml" />
-    <Content Include="DangNhap\UserList.json">
+    <Content Include="UserList.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="bin\Debug\BTL1.exe.config" />

@@ -233,7 +233,7 @@
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(90, 22);
+            this.lblUserName.Location = new System.Drawing.Point(75, 22);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(0, 19);
             this.lblUserName.TabIndex = 3;
@@ -289,7 +289,6 @@
             this.ClientSize = new System.Drawing.Size(910, 494);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Main";
             this.Text = "Main";

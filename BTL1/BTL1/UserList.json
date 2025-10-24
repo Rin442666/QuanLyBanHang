@@ -1,0 +1,23 @@
+[
+  {
+    "ID": "Admin01",
+    "Name": "Hải",
+    "UserName": "haid",
+    "Password": "1",
+    "Authority": "Admin"
+  },
+  {
+    "ID": "NV01",
+    "Name": "Hào",
+    "UserName": "hao",
+    "Password": "1",
+    "Authority": "NhanVien"
+  },
+  {
+    "ID": "NV02",
+    "Name": "Phong",
+    "UserName": "phong",
+    "Password": "1",
+    "Authority": "BaoVe"
+  }
+]

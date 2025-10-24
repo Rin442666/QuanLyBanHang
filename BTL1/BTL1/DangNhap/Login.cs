@@ -75,5 +75,19 @@ namespace BTL1.DangNhap
         {
 
         }
+
+        private void btnLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void btnLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(this, new EventArgs());
+            }
+        }
+
     }
 }
