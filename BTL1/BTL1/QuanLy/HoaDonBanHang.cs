@@ -21,6 +21,7 @@ namespace BTL1
         {
             Main mainForm = (Main)this.ParentForm;
             mainForm.Home(true);
+            this.Close();
         }
     }
 }

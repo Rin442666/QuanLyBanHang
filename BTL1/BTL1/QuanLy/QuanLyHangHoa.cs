@@ -25,12 +25,7 @@ namespace BTL1
             conn = new SqlConnection(connStr);
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Main mainForm = (Main)this.ParentForm;
-            mainForm.Home(true);
-            this.Close();
-        }
+        
 
         private void QuanLyHangHoa_Load(object sender, EventArgs e)
         {
@@ -38,6 +33,7 @@ namespace BTL1
             SetInputEnabled(false);
             btnConfirm.Visible = false;
         }
+
         private void LoadData()
         {
             da = new SqlDataAdapter("SELECT * FROM HangHoa", conn);
@@ -195,6 +191,18 @@ namespace BTL1
                 txtDonVi.Text = row.Cells["DonVi"].Value.ToString();
                 txtMoTa.Text = row.Cells["MoTa"].Value.ToString();
             }
+        }
+        
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Main mainForm = (Main)this.ParentForm;
+            mainForm.Home(true);
+            this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

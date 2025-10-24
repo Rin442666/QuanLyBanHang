@@ -1,23 +1,44 @@
 [
   {
     "ID": "Admin01",
-    "Name": "Hải",
-    "UserName": "haid",
+    "Name": "Hoàng Đình Hào",
+    "UserName": "hao",
     "Password": "1",
-    "Authority": "Admin"
+    "Authority": "QuanLy"
   },
   {
     "ID": "NV01",
-    "Name": "Hào",
-    "UserName": "hao",
+    "Name": "Hà Văn Hải",
+    "UserName": "hai",
     "Password": "1",
     "Authority": "NhanVien"
   },
   {
     "ID": "NV02",
-    "Name": "Phong",
+    "Name": "Hà Vân Phong",
     "UserName": "phong",
     "Password": "1",
-    "Authority": "BaoVe"
+    "Authority": "NhanVien"
+  },
+  {
+    "ID": "NV03",
+    "Name": "Nguyễn Quốc Thịnh",
+    "UserName": "thinh",
+    "Password": "1",
+    "Authority": "NhanVien"
+  },
+  {
+    "ID": "NV04",
+    "Name": "Lê Duy Gia Bảo",
+    "UserName": "bao",
+    "Password": "1",
+    "Authority": "NhanVien"
+  },
+  {
+    "ID": "NV05",
+    "Name": "Ngô Thế Minh",
+    "UserName": "minh",
+    "Password": "1",
+    "Authority": "NhanVien"
   }
 ]

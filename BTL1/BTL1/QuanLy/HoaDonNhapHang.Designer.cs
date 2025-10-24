@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.grbThongTin = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.btnTaoHD = new System.Windows.Forms.Button();
+            this.btnXemChiTiet = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.dtpNhap = new System.Windows.Forms.DateTimePicker();
             this.txtMaNV = new System.Windows.Forms.TextBox();
@@ -41,19 +46,14 @@
             this.btnInHD = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.grbChiTietHDN = new System.Windows.Forms.GroupBox();
-            this.dgvHoaDonBan = new System.Windows.Forms.GroupBox();
             this.dgvChiTietHDN = new System.Windows.Forms.DataGridView();
+            this.dgvHoaDonBan = new System.Windows.Forms.GroupBox();
             this.dgvHDN = new System.Windows.Forms.DataGridView();
-            this.btnXemChiTiet = new System.Windows.Forms.Button();
-            this.btnTaoHD = new System.Windows.Forms.Button();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.grbThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
             this.grbChiTietHDN.SuspendLayout();
-            this.dgvHoaDonBan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHDN)).BeginInit();
+            this.dgvHoaDonBan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDN)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +78,54 @@
             this.grbThongTin.TabIndex = 0;
             this.grbThongTin.TabStop = false;
             this.grbThongTin.Text = "Thông tin chung";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(287, 98);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(84, 27);
+            this.btnSearch.TabIndex = 19;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(112, 98);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(153, 27);
+            this.txtSearch.TabIndex = 18;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(12, 101);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(79, 19);
+            this.lblSearch.TabIndex = 17;
+            this.lblSearch.Text = "Tìm kiếm:";
+            // 
+            // btnTaoHD
+            // 
+            this.btnTaoHD.Location = new System.Drawing.Point(133, 134);
+            this.btnTaoHD.Name = "btnTaoHD";
+            this.btnTaoHD.Size = new System.Drawing.Size(132, 27);
+            this.btnTaoHD.TabIndex = 16;
+            this.btnTaoHD.Text = "Tạo hóa đơn mới";
+            this.btnTaoHD.UseVisualStyleBackColor = true;
+            this.btnTaoHD.Click += new System.EventHandler(this.btnTaoHD_Click);
+            // 
+            // btnXemChiTiet
+            // 
+            this.btnXemChiTiet.Location = new System.Drawing.Point(16, 134);
+            this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXemChiTiet.Name = "btnXemChiTiet";
+            this.btnXemChiTiet.Size = new System.Drawing.Size(111, 27);
+            this.btnXemChiTiet.TabIndex = 15;
+            this.btnXemChiTiet.Text = "Xem chi tiết";
+            this.btnXemChiTiet.UseVisualStyleBackColor = true;
+            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
             // btnBack
             // 
@@ -169,6 +217,7 @@
             this.btnInHD.TabIndex = 2;
             this.btnInHD.Text = "In Hóa Đơn";
             this.btnInHD.UseVisualStyleBackColor = true;
+            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
             // label5
             // 
@@ -193,17 +242,6 @@
             this.grbChiTietHDN.TabStop = false;
             this.grbChiTietHDN.Text = "Chi tiết hóa đơn";
             // 
-            // dgvHoaDonBan
-            // 
-            this.dgvHoaDonBan.Controls.Add(this.dgvHDN);
-            this.dgvHoaDonBan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvHoaDonBan.Location = new System.Drawing.Point(0, 168);
-            this.dgvHoaDonBan.Name = "dgvHoaDonBan";
-            this.dgvHoaDonBan.Size = new System.Drawing.Size(462, 386);
-            this.dgvHoaDonBan.TabIndex = 2;
-            this.dgvHoaDonBan.TabStop = false;
-            this.dgvHoaDonBan.Text = "Hóa đơn nhập";
-            // 
             // dgvChiTietHDN
             // 
             this.dgvChiTietHDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -216,6 +254,17 @@
             this.dgvChiTietHDN.Size = new System.Drawing.Size(451, 482);
             this.dgvChiTietHDN.TabIndex = 1;
             // 
+            // dgvHoaDonBan
+            // 
+            this.dgvHoaDonBan.Controls.Add(this.dgvHDN);
+            this.dgvHoaDonBan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvHoaDonBan.Location = new System.Drawing.Point(0, 168);
+            this.dgvHoaDonBan.Name = "dgvHoaDonBan";
+            this.dgvHoaDonBan.Size = new System.Drawing.Size(462, 386);
+            this.dgvHoaDonBan.TabIndex = 2;
+            this.dgvHoaDonBan.TabStop = false;
+            this.dgvHoaDonBan.Text = "Hóa đơn nhập";
+            // 
             // dgvHDN
             // 
             this.dgvHDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -227,51 +276,7 @@
             this.dgvHDN.RowTemplate.Height = 24;
             this.dgvHDN.Size = new System.Drawing.Size(462, 360);
             this.dgvHDN.TabIndex = 0;
-            // 
-            // btnXemChiTiet
-            // 
-            this.btnXemChiTiet.Location = new System.Drawing.Point(16, 134);
-            this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnXemChiTiet.Name = "btnXemChiTiet";
-            this.btnXemChiTiet.Size = new System.Drawing.Size(111, 27);
-            this.btnXemChiTiet.TabIndex = 15;
-            this.btnXemChiTiet.Text = "Xem chi tiết";
-            this.btnXemChiTiet.UseVisualStyleBackColor = true;
-            // 
-            // btnTaoHD
-            // 
-            this.btnTaoHD.Location = new System.Drawing.Point(133, 134);
-            this.btnTaoHD.Name = "btnTaoHD";
-            this.btnTaoHD.Size = new System.Drawing.Size(132, 27);
-            this.btnTaoHD.TabIndex = 16;
-            this.btnTaoHD.Text = "Tạo hóa đơn mới";
-            this.btnTaoHD.UseVisualStyleBackColor = true;
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(12, 101);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(79, 19);
-            this.lblSearch.TabIndex = 17;
-            this.lblSearch.Text = "Tìm kiếm:";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(112, 98);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(153, 27);
-            this.txtSearch.TabIndex = 18;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(287, 98);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(84, 27);
-            this.btnSearch.TabIndex = 19;
-            this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.dgvHDN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDN_CellClick);
             // 
             // HoaDonNhapHang
             // 
@@ -284,13 +289,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HoaDonNhapHang";
             this.Text = "Chi tiết hoá đơn nhập";
+            this.Load += new System.EventHandler(this.HoaDonNhapHang_Load);
             this.grbThongTin.ResumeLayout(false);
             this.grbThongTin.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.grbChiTietHDN.ResumeLayout(false);
-            this.dgvHoaDonBan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHDN)).EndInit();
+            this.dgvHoaDonBan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDN)).EndInit();
             this.ResumeLayout(false);
 

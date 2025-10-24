@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbxChucNang = new System.Windows.Forms.GroupBox();
+            this.btnQLHDN = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnQLHDB = new System.Windows.Forms.Button();
             this.btnQLNV = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.lblTen = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnLogIn = new System.Windows.Forms.Button();
-            this.btnQLHDN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.gbxChucNang.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -66,6 +66,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(910, 494);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // gbxChucNang
             // 
@@ -82,6 +83,17 @@
             this.gbxChucNang.TabIndex = 3;
             this.gbxChucNang.TabStop = false;
             this.gbxChucNang.Text = "Chức năng:";
+            // 
+            // btnQLHDN
+            // 
+            this.btnQLHDN.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLHDN.Location = new System.Drawing.Point(479, 126);
+            this.btnQLHDN.Name = "btnQLHDN";
+            this.btnQLHDN.Size = new System.Drawing.Size(306, 48);
+            this.btnQLHDN.TabIndex = 7;
+            this.btnQLHDN.Text = "Quản lý hóa đơn nhập";
+            this.btnQLHDN.UseVisualStyleBackColor = true;
+            this.btnQLHDN.Click += new System.EventHandler(this.btnQLHDN_Click);
             // 
             // btnClose
             // 
@@ -229,11 +241,12 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(497, 55);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(75, 22);
+            this.lblUserName.Location = new System.Drawing.Point(73, 22);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(0, 19);
             this.lblUserName.TabIndex = 3;
@@ -241,11 +254,11 @@
             // lblTen
             // 
             this.lblTen.AutoSize = true;
-            this.lblTen.Location = new System.Drawing.Point(29, 21);
+            this.lblTen.Location = new System.Drawing.Point(32, 21);
             this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(47, 19);
+            this.lblTen.Size = new System.Drawing.Size(43, 19);
             this.lblTen.TabIndex = 2;
-            this.lblTen.Text = "Tên : ";
+            this.lblTen.Text = "Tên :";
             this.lblTen.Visible = false;
             // 
             // btnLogOut
@@ -269,17 +282,6 @@
             this.btnLogIn.Text = "Đăng Nhập";
             this.btnLogIn.UseVisualStyleBackColor = true;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
-            // 
-            // btnQLHDN
-            // 
-            this.btnQLHDN.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLHDN.Location = new System.Drawing.Point(479, 126);
-            this.btnQLHDN.Name = "btnQLHDN";
-            this.btnQLHDN.Size = new System.Drawing.Size(306, 48);
-            this.btnQLHDN.TabIndex = 7;
-            this.btnQLHDN.Text = "Quản lý hóa đơn nhập";
-            this.btnQLHDN.UseVisualStyleBackColor = true;
-            this.btnQLHDN.Click += new System.EventHandler(this.btnQLHDN_Click);
             // 
             // Main
             // 

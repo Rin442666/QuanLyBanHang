@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grbThongTinNV = new System.Windows.Forms.GroupBox();
+            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.txtQue = new System.Windows.Forms.TextBox();
             this.txtMail = new System.Windows.Forms.TextBox();
@@ -51,8 +53,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.grbThongTinNV.SuspendLayout();
             this.grbChucNang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -86,6 +86,23 @@
             this.grbThongTinNV.TabStop = false;
             this.grbThongTinNV.Text = "Thông tin nhân viên";
             // 
+            // dtNgaySinh
+            // 
+            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgaySinh.Location = new System.Drawing.Point(747, 32);
+            this.dtNgaySinh.Name = "dtNgaySinh";
+            this.dtNgaySinh.Size = new System.Drawing.Size(131, 27);
+            this.dtNgaySinh.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(660, 35);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 19);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Ngày sinh:";
+            // 
             // btnConfirm
             // 
             this.btnConfirm.Location = new System.Drawing.Point(793, 124);
@@ -98,7 +115,7 @@
             // 
             // txtQue
             // 
-            this.txtQue.Location = new System.Drawing.Point(444, 77);
+            this.txtQue.Location = new System.Drawing.Point(444, 124);
             this.txtQue.Margin = new System.Windows.Forms.Padding(4);
             this.txtQue.Name = "txtQue";
             this.txtQue.Size = new System.Drawing.Size(209, 27);
@@ -114,7 +131,7 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(444, 124);
+            this.txtSDT.Location = new System.Drawing.Point(444, 74);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(209, 27);
@@ -159,7 +176,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.label5.Location = new System.Drawing.Point(382, 80);
+            this.label5.Location = new System.Drawing.Point(382, 127);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 19);
@@ -170,7 +187,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.label4.Location = new System.Drawing.Point(382, 129);
+            this.label4.Location = new System.Drawing.Point(382, 80);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 19);
@@ -315,23 +332,6 @@
             this.dgvNhanVien.TabIndex = 2;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             this.dgvNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(660, 35);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 19);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Ngày sinh:";
-            // 
-            // dtNgaySinh
-            // 
-            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgaySinh.Location = new System.Drawing.Point(747, 32);
-            this.dtNgaySinh.Name = "dtNgaySinh";
-            this.dtNgaySinh.Size = new System.Drawing.Size(131, 27);
-            this.dtNgaySinh.TabIndex = 12;
             // 
             // QuanLyNhanVien
             // 
