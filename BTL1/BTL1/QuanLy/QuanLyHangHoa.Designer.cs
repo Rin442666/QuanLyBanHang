@@ -40,11 +40,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtDonVi = new System.Windows.Forms.TextBox();
-            //this.txtGiaNhap = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            //this.label5 = new System.Windows.Forms.Label();
             this.txtDetails = new System.Windows.Forms.TextBox();
-            this.txtPhanLoai = new System.Windows.Forms.TextBox();
+            this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTenHang = new System.Windows.Forms.TextBox();
@@ -109,7 +107,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(675, 14);
+            this.btnClear.Location = new System.Drawing.Point(686, 16);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(84, 27);
@@ -158,11 +156,9 @@
             // 
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtDonVi);
-            //this.groupBox1.Controls.Add(this.txtGiaNhap);
             this.groupBox1.Controls.Add(this.label7);
-            //this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtDetails);
-            this.groupBox1.Controls.Add(this.txtPhanLoai);
+            this.groupBox1.Controls.Add(this.txtDonGia);
             this.groupBox1.Controls.Add(this.txtSoLuong);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtTenHang);
@@ -183,48 +179,32 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(750, 208);
+            this.button1.Location = new System.Drawing.Point(748, 203);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 28);
             this.button1.TabIndex = 12;
             this.button1.Text = "Xác nhận";
             this.button1.UseVisualStyleBackColor = true;
-            //this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtDonVi
             // 
-            this.txtDonVi.Location = new System.Drawing.Point(436, 161);
+            this.txtDonVi.Location = new System.Drawing.Point(436, 103);
             this.txtDonVi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDonVi.Name = "txtDonVi";
             this.txtDonVi.Size = new System.Drawing.Size(112, 27);
             this.txtDonVi.TabIndex = 11;
-            // 
-            // txtGiaNhap
-            // 
-            //this.txtGiaNhap.Location = new System.Drawing.Point(436, 40);
-            //this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            //this.txtGiaNhap.Name = "txtGiaNhap";
-            //this.txtGiaNhap.Size = new System.Drawing.Size(112, 27);
-            //this.txtGiaNhap.TabIndex = 9;
+            this.txtDonVi.TextChanged += new System.EventHandler(this.txtDonVi_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(328, 165);
+            this.label7.Location = new System.Drawing.Point(328, 106);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 19);
             this.label7.TabIndex = 8;
             this.label7.Text = "Đơn vị tính:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label5
-            // 
-            //this.label5.AutoSize = true;
-            //this.label5.Location = new System.Drawing.Point(328, 45);
-            //this.label5.Name = "label5";
-            //this.label5.Size = new System.Drawing.Size(67, 19);
-            //this.label5.TabIndex = 6;
-            //this.label5.Text = "Đơn giá:";
             // 
             // txtDetails
             // 
@@ -236,17 +216,17 @@
             this.txtDetails.TabIndex = 5;
             this.txtDetails.TextChanged += new System.EventHandler(this.txtDetails_TextChanged);
             // 
-            // txtPhanLoai
+            // txtDonGia
             // 
-            this.txtPhanLoai.Location = new System.Drawing.Point(108, 161);
-            this.txtPhanLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPhanLoai.Name = "txtPhanLoai";
-            this.txtPhanLoai.Size = new System.Drawing.Size(146, 27);
-            this.txtPhanLoai.TabIndex = 5;
+            this.txtDonGia.Location = new System.Drawing.Point(108, 161);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.Size = new System.Drawing.Size(146, 27);
+            this.txtDonGia.TabIndex = 5;
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(436, 103);
+            this.txtSoLuong.Location = new System.Drawing.Point(436, 42);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(112, 27);
@@ -274,9 +254,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(28, 165);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 19);
+            this.label8.Size = new System.Drawing.Size(67, 19);
             this.label8.TabIndex = 2;
-            this.label8.Text = "Phân loại:";
+            this.label8.Text = "Đơn giá:";
             // 
             // txtMaHang
             // 
@@ -289,7 +269,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(328, 106);
+            this.label3.Location = new System.Drawing.Point(328, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 19);
             this.label3.TabIndex = 2;
@@ -355,7 +335,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDetails;
-        private System.Windows.Forms.TextBox txtPhanLoai;
+        private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSearch;

@@ -149,5 +149,10 @@ namespace BTL1
             MessageBox.Show("Đã đăng xuất.", "Thông báo");
             NotLogged();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

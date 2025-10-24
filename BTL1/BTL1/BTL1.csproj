@@ -189,9 +189,33 @@
     <EmbeddedResource Include="QuanLy\QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="bin\Debug\BTL1.exe" />
+    <Content Include="bin\Debug\BTL1.pdb" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml" />
+    <Content Include="bin\Debug\System.Buffers.dll" />
+    <Content Include="bin\Debug\System.Buffers.xml" />
+    <Content Include="bin\Debug\System.IO.Pipelines.dll" />
+    <Content Include="bin\Debug\System.IO.Pipelines.xml" />
+    <Content Include="bin\Debug\System.Memory.dll" />
+    <Content Include="bin\Debug\System.Memory.xml" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.dll" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.xml" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\Debug\System.Text.Encodings.Web.dll" />
+    <Content Include="bin\Debug\System.Text.Encodings.Web.xml" />
+    <Content Include="bin\Debug\System.Text.Json.dll" />
+    <Content Include="bin\Debug\System.Text.Json.xml" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\Debug\System.ValueTuple.dll" />
+    <Content Include="bin\Debug\System.ValueTuple.xml" />
     <Content Include="DangNhap\UserList.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="bin\Debug\BTL1.exe.config" />
+    <None Include="bin\Debug\UserList.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -223,6 +247,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\QuanLyBanHang.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\DangNhap\" />
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

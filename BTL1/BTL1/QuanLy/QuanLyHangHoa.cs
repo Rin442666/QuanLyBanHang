@@ -38,5 +38,15 @@ namespace BTL1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDonVi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
