@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.gbxChucNang = new System.Windows.Forms.GroupBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnQLHD = new System.Windows.Forms.Button();
+            this.btnQLHDB = new System.Windows.Forms.Button();
             this.btnQLNV = new System.Windows.Forms.Button();
             this.btnQLKH = new System.Windows.Forms.Button();
             this.btnQLHH = new System.Windows.Forms.Button();
@@ -47,6 +47,7 @@
             this.lblTen = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.btnLogIn = new System.Windows.Forms.Button();
+            this.btnQLHDN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.gbxChucNang.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,8 +69,9 @@
             // 
             // gbxChucNang
             // 
+            this.gbxChucNang.Controls.Add(this.btnQLHDN);
             this.gbxChucNang.Controls.Add(this.btnClose);
-            this.gbxChucNang.Controls.Add(this.btnQLHD);
+            this.gbxChucNang.Controls.Add(this.btnQLHDB);
             this.gbxChucNang.Controls.Add(this.btnQLNV);
             this.gbxChucNang.Controls.Add(this.btnQLKH);
             this.gbxChucNang.Controls.Add(this.btnQLHH);
@@ -91,21 +93,21 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnQLHD
+            // btnQLHDB
             // 
-            this.btnQLHD.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLHD.Location = new System.Drawing.Point(479, 126);
-            this.btnQLHD.Name = "btnQLHD";
-            this.btnQLHD.Size = new System.Drawing.Size(306, 48);
-            this.btnQLHD.TabIndex = 5;
-            this.btnQLHD.Text = "Quản lý hóa đơn";
-            this.btnQLHD.UseVisualStyleBackColor = true;
-            this.btnQLHD.Click += new System.EventHandler(this.btnQLHD_Click);
+            this.btnQLHDB.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLHDB.Location = new System.Drawing.Point(479, 47);
+            this.btnQLHDB.Name = "btnQLHDB";
+            this.btnQLHDB.Size = new System.Drawing.Size(306, 48);
+            this.btnQLHDB.TabIndex = 5;
+            this.btnQLHDB.Text = "Quản lý hóa đơn bán hàng";
+            this.btnQLHDB.UseVisualStyleBackColor = true;
+            this.btnQLHDB.Click += new System.EventHandler(this.btnQLHDB_Click);
             // 
             // btnQLNV
             // 
             this.btnQLNV.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLNV.Location = new System.Drawing.Point(479, 47);
+            this.btnQLNV.Location = new System.Drawing.Point(95, 204);
             this.btnQLNV.Name = "btnQLNV";
             this.btnQLNV.Size = new System.Drawing.Size(306, 48);
             this.btnQLNV.TabIndex = 2;
@@ -192,7 +194,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -228,7 +229,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(497, 55);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblUserName
             // 
@@ -270,6 +270,17 @@
             this.btnLogIn.UseVisualStyleBackColor = true;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
+            // btnQLHDN
+            // 
+            this.btnQLHDN.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLHDN.Location = new System.Drawing.Point(479, 126);
+            this.btnQLHDN.Name = "btnQLHDN";
+            this.btnQLHDN.Size = new System.Drawing.Size(306, 48);
+            this.btnQLHDN.TabIndex = 7;
+            this.btnQLHDN.Text = "Quản lý hóa đơn nhập";
+            this.btnQLHDN.UseVisualStyleBackColor = true;
+            this.btnQLHDN.Click += new System.EventHandler(this.btnQLHDN_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -305,7 +316,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblTieuDeMain;
         private System.Windows.Forms.GroupBox gbxChucNang;
-        private System.Windows.Forms.Button btnQLHD;
+        private System.Windows.Forms.Button btnQLHDB;
         private System.Windows.Forms.Button btnQLNV;
         private System.Windows.Forms.Button btnQLKH;
         private System.Windows.Forms.Button btnQLHH;
@@ -316,5 +327,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Button btnQLHDN;
     }
 }

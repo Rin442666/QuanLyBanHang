@@ -46,7 +46,8 @@ namespace BTL1
                 lblTen.Visible = false;
                 lblUserName.Visible = false;
                 lblUserName.Text = "";
-                btnQLHD.Enabled = false;
+                btnQLHDB.Enabled = false;
+                btnQLHDN.Enabled = false;
                 btnQLKH.Enabled = false;
                 btnQLNV.Enabled = false;
                 btnQLHH.Enabled = false;
@@ -64,17 +65,19 @@ namespace BTL1
 
                 if (quyen == "Admin" || quyen == "QuanLy")
                 {
-                    btnQLHD.Enabled = true;
+                    btnQLHDB.Enabled = true;
                     btnQLKH.Enabled = true;
                     btnQLNV.Enabled = true;
                     btnQLHH.Enabled = true;
+                    btnQLHDN.Enabled = true;
                 }
                 else if (quyen == "NhanVien")
                 {
-                    btnQLHD.Enabled = true;
+                    btnQLHDB.Enabled = true;
                     btnQLKH.Enabled = true;
                     btnQLNV.Enabled = false;
                     btnQLHH.Enabled = true;
+                    btnQLHDN.Enabled = true;
                 }
             }
         }
@@ -86,12 +89,6 @@ namespace BTL1
 
         // CÁC SỰ KIỆN CLICK
 
-        
-
-        private void btnQLHD_Click(object sender, EventArgs e)
-        {
-            LoadForm(new QuanLyHoaDon());
-        }
 
         private void btnQLKH_Click(object sender, EventArgs e)
         {
@@ -120,14 +117,6 @@ namespace BTL1
             gbxChucNang.Visible = Visible;
         }
 
-        private void lblTieuDeMain_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
         //LOGIN - LOGOUT
         private void btnLogIn_Click(object sender, EventArgs e)
         {
@@ -150,9 +139,14 @@ namespace BTL1
             NotLogged();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnQLHDB_Click(object sender, EventArgs e)
         {
+            LoadForm(new HoaDonBanHang());
+        }
 
+        private void btnQLHDN_Click(object sender, EventArgs e)
+        {
+            LoadForm(new HoaDonNhapHang());
         }
     }
 }

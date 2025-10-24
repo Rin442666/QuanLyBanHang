@@ -17,11 +17,6 @@ namespace BTL1
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             Main mainForm = (Main)this.ParentForm;
