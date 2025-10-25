@@ -232,8 +232,8 @@
             // 
             // grbChiTietHDN
             // 
-            this.grbChiTietHDN.Controls.Add(this.dgvChiTietHDN);
             this.grbChiTietHDN.Controls.Add(this.panel1);
+            this.grbChiTietHDN.Controls.Add(this.dgvChiTietHDN);
             this.grbChiTietHDN.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbChiTietHDN.Location = new System.Drawing.Point(468, 0);
             this.grbChiTietHDN.Name = "grbChiTietHDN";
