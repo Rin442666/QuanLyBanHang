@@ -41,7 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnTong = new System.Windows.Forms.Panel();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.btnInHD = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.dgvHoaDonBan = new System.Windows.Forms.GroupBox();
             this.dgvHDN = new System.Windows.Forms.DataGridView();
             this.grbThongTin.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnTong.SuspendLayout();
             this.grbChiTietHDN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHDN)).BeginInit();
             this.dgvHoaDonBan.SuspendLayout();
@@ -186,16 +186,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã hóa đơn:";
             // 
-            // panel1
+            // pnTong
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.txtTongTien);
-            this.panel1.Controls.Add(this.btnInHD);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(-5, 504);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(456, 50);
-            this.panel1.TabIndex = 0;
+            this.pnTong.BackColor = System.Drawing.Color.Transparent;
+            this.pnTong.Controls.Add(this.txtTongTien);
+            this.pnTong.Controls.Add(this.btnInHD);
+            this.pnTong.Controls.Add(this.label5);
+            this.pnTong.Location = new System.Drawing.Point(3, 505);
+            this.pnTong.Name = "pnTong";
+            this.pnTong.Size = new System.Drawing.Size(445, 46);
+            this.pnTong.TabIndex = 0;
             // 
             // txtTongTien
             // 
@@ -211,7 +211,7 @@
             // 
             this.btnInHD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInHD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInHD.Location = new System.Drawing.Point(326, 10);
+            this.btnInHD.Location = new System.Drawing.Point(320, 8);
             this.btnInHD.Name = "btnInHD";
             this.btnInHD.Size = new System.Drawing.Size(118, 30);
             this.btnInHD.TabIndex = 2;
@@ -232,7 +232,7 @@
             // 
             // grbChiTietHDN
             // 
-            this.grbChiTietHDN.Controls.Add(this.panel1);
+            this.grbChiTietHDN.Controls.Add(this.pnTong);
             this.grbChiTietHDN.Controls.Add(this.dgvChiTietHDN);
             this.grbChiTietHDN.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbChiTietHDN.Location = new System.Drawing.Point(468, 0);
@@ -247,11 +247,12 @@
             this.dgvChiTietHDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChiTietHDN.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvChiTietHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChiTietHDN.Location = new System.Drawing.Point(0, 26);
+            this.dgvChiTietHDN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvChiTietHDN.Location = new System.Drawing.Point(3, 23);
             this.dgvChiTietHDN.Name = "dgvChiTietHDN";
             this.dgvChiTietHDN.RowHeadersWidth = 51;
             this.dgvChiTietHDN.RowTemplate.Height = 24;
-            this.dgvChiTietHDN.Size = new System.Drawing.Size(451, 482);
+            this.dgvChiTietHDN.Size = new System.Drawing.Size(445, 531);
             this.dgvChiTietHDN.TabIndex = 1;
             // 
             // dgvHoaDonBan
@@ -292,8 +293,8 @@
             this.Load += new System.EventHandler(this.HoaDonNhapHang_Load);
             this.grbThongTin.ResumeLayout(false);
             this.grbThongTin.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnTong.ResumeLayout(false);
+            this.pnTong.PerformLayout();
             this.grbChiTietHDN.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHDN)).EndInit();
             this.dgvHoaDonBan.ResumeLayout(false);
@@ -312,7 +313,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnTong;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnInHD;
         private System.Windows.Forms.TextBox txtTongTien;

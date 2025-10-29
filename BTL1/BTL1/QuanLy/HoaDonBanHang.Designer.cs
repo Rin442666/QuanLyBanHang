@@ -93,6 +93,7 @@
             this.btnXemChiTiet.TabIndex = 14;
             this.btnXemChiTiet.Text = "Xem chi tiết";
             this.btnXemChiTiet.UseVisualStyleBackColor = true;
+            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
             // txtSearch
             // 
@@ -119,6 +120,7 @@
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnTaoHD
             // 
@@ -302,6 +304,8 @@
             this.dgvHDB.RowTemplate.Height = 24;
             this.dgvHDB.Size = new System.Drawing.Size(463, 322);
             this.dgvHDB.TabIndex = 0;
+            this.dgvHDB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellClick);
+            this.dgvHDB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellClick);
             // 
             // HoaDonBanHang
             // 
@@ -316,6 +320,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "HoaDonBanHang";
             this.Text = "Chi tiết hóa đơn bán hàng";
+            this.Load += new System.EventHandler(this.HoaDonBanHang_Load);
             this.grbThongtin.ResumeLayout(false);
             this.grbThongtin.PerformLayout();
             this.grbChiTietHDB.ResumeLayout(false);

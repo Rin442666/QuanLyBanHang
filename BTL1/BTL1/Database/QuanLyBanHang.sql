@@ -3,6 +3,15 @@ create database QuanLyBanHang;
 use QuanLyBanHang;
 go
 
+DELETE FROM ChiTietHDB;  
+DELETE FROM HoaDonBan;
+DeleTE FROM ChiTietHDN; 
+DELETE FROM HoaDonNhap;
+DELETE FROM KhachHang;
+DELETE FROM TaiKhoan;
+DELETE FROM NhanVien;
+DELETE FROM HangHoa;
+
 
 -- Bảng hàng hóa
 create table HangHoa (

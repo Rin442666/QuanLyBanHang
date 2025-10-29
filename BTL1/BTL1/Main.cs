@@ -125,7 +125,7 @@ namespace BTL1
                 if (loginForm.ShowDialog() == DialogResult.OK)
                 {
                     this.loggedInUser = loginForm.LoggedInUser;
-                    MessageBox.Show($"Xin chào {loggedInUser.UserName} ({loggedInUser.Authority})!");
+                    MessageBox.Show($"Xin chào {loggedInUser.Name} ({loggedInUser.Authority})!");
                     NotLogged();
                 }
             }

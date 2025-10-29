@@ -101,6 +101,18 @@ namespace BTL1
 
             DataTable dtChiTiet = new DataTable();
 
+            pnTong.Visible = true;
+            decimal tongTien = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                if (row["TongTien"] != DBNull.Value)
+                {
+                    tongTien += Convert.ToDecimal(row["TongTien"]);
+                }
+            }
+
+            txtTongTien.Text = tongTien.ToString("N0") + " VNĐ";
+
             try
             {
                 daChiTiet.Fill(dtChiTiet);
@@ -145,5 +157,6 @@ namespace BTL1
             mainForm.Home(true);
             this.Close();
         }
+
     }
 }
