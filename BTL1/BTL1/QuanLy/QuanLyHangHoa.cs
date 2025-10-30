@@ -25,8 +25,6 @@ namespace BTL1
             conn = new SqlConnection(connStr);
         }
 
-        
-
         private void QuanLyHangHoa_Load(object sender, EventArgs e)
         {
             LoadData();

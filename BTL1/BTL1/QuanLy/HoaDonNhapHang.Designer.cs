@@ -49,6 +49,7 @@
             this.dgvChiTietHDN = new System.Windows.Forms.DataGridView();
             this.dgvHoaDonBan = new System.Windows.Forms.GroupBox();
             this.dgvHDN = new System.Windows.Forms.DataGridView();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.grbThongTin.SuspendLayout();
             this.pnTong.SuspendLayout();
             this.grbChiTietHDN.SuspendLayout();
@@ -59,6 +60,7 @@
             // 
             // grbThongTin
             // 
+            this.grbThongTin.Controls.Add(this.btnLuu);
             this.grbThongTin.Controls.Add(this.btnSearch);
             this.grbThongTin.Controls.Add(this.txtSearch);
             this.grbThongTin.Controls.Add(this.lblSearch);
@@ -81,10 +83,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(287, 98);
+            this.btnSearch.Location = new System.Drawing.Point(271, 98);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(84, 27);
+            this.btnSearch.Size = new System.Drawing.Size(84, 29);
             this.btnSearch.TabIndex = 19;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -131,7 +133,7 @@
             // 
             this.btnBack.Location = new System.Drawing.Point(361, 134);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(86, 23);
+            this.btnBack.Size = new System.Drawing.Size(86, 26);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Thoát";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -156,6 +158,7 @@
             // 
             this.txtMaHDN.Location = new System.Drawing.Point(112, 26);
             this.txtMaHDN.Name = "txtMaHDN";
+            this.txtMaHDN.ReadOnly = true;
             this.txtMaHDN.Size = new System.Drawing.Size(106, 27);
             this.txtMaHDN.TabIndex = 4;
             // 
@@ -204,6 +207,7 @@
             this.txtTongTien.ForeColor = System.Drawing.Color.Red;
             this.txtTongTien.Location = new System.Drawing.Point(107, 10);
             this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
             this.txtTongTien.Size = new System.Drawing.Size(174, 30);
             this.txtTongTien.TabIndex = 3;
             // 
@@ -279,6 +283,16 @@
             this.dgvHDN.TabIndex = 0;
             this.dgvHDN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDN_CellClick);
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(269, 134);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(86, 27);
+            this.btnLuu.TabIndex = 20;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // HoaDonNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -326,5 +340,6 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnLuu;
     }
 }

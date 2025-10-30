@@ -51,6 +51,7 @@
             this.dgvChiTietHDB = new System.Windows.Forms.DataGridView();
             this.grbHoaDonBan = new System.Windows.Forms.GroupBox();
             this.dgvHDB = new System.Windows.Forms.DataGridView();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.grbThongtin.SuspendLayout();
             this.grbChiTietHDB.SuspendLayout();
             this.pnTong.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             // grbThongtin
             // 
+            this.grbThongtin.Controls.Add(this.btnLuu);
             this.grbThongtin.Controls.Add(this.btnXemChiTiet);
             this.grbThongtin.Controls.Add(this.txtSearch);
             this.grbThongtin.Controls.Add(this.lblSearch);
@@ -113,7 +115,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(280, 109);
+            this.btnSearch.Location = new System.Drawing.Point(271, 109);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(84, 27);
@@ -130,10 +132,11 @@
             this.btnTaoHD.TabIndex = 10;
             this.btnTaoHD.Text = "Tạo hóa đơn mới";
             this.btnTaoHD.UseVisualStyleBackColor = true;
+            this.btnTaoHD.Click += new System.EventHandler(this.btnTaoHD_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(367, 144);
+            this.btnBack.Location = new System.Drawing.Point(361, 144);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(84, 27);
@@ -181,6 +184,7 @@
             this.txtMaHDB.Location = new System.Drawing.Point(112, 32);
             this.txtMaHDB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaHDB.Name = "txtMaHDB";
+            this.txtMaHDB.ReadOnly = true;
             this.txtMaHDB.Size = new System.Drawing.Size(107, 27);
             this.txtMaHDB.TabIndex = 4;
             // 
@@ -198,9 +202,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(225, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 19);
+            this.label2.Size = new System.Drawing.Size(108, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Nhân viên nhập:";
+            this.label2.Text = "Nhân viên bán:";
             // 
             // label1
             // 
@@ -230,10 +234,11 @@
             this.pnTong.Controls.Add(this.txtTongTien);
             this.pnTong.Controls.Add(this.btnInHD);
             this.pnTong.Controls.Add(this.lblTongTien);
+            this.pnTong.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnTong.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnTong.Location = new System.Drawing.Point(-5, 486);
+            this.pnTong.Location = new System.Drawing.Point(3, 482);
             this.pnTong.Name = "pnTong";
-            this.pnTong.Size = new System.Drawing.Size(458, 48);
+            this.pnTong.Size = new System.Drawing.Size(447, 48);
             this.pnTong.TabIndex = 6;
             // 
             // txtTongTien
@@ -243,6 +248,7 @@
             this.txtTongTien.ForeColor = System.Drawing.Color.Red;
             this.txtTongTien.Location = new System.Drawing.Point(102, 8);
             this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
             this.txtTongTien.Size = new System.Drawing.Size(172, 30);
             this.txtTongTien.TabIndex = 3;
             // 
@@ -250,12 +256,13 @@
             // 
             this.btnInHD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInHD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInHD.Location = new System.Drawing.Point(328, 10);
+            this.btnInHD.Location = new System.Drawing.Point(317, 10);
             this.btnInHD.Name = "btnInHD";
             this.btnInHD.Size = new System.Drawing.Size(124, 28);
             this.btnInHD.TabIndex = 2;
             this.btnInHD.Text = "In Hóa Đơn";
             this.btnInHD.UseVisualStyleBackColor = true;
+            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
             // lblTongTien
             // 
@@ -270,17 +277,15 @@
             // 
             // dgvChiTietHDB
             // 
-            this.dgvChiTietHDB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvChiTietHDB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChiTietHDB.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvChiTietHDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChiTietHDB.Location = new System.Drawing.Point(0, 27);
+            this.dgvChiTietHDB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvChiTietHDB.Location = new System.Drawing.Point(3, 24);
             this.dgvChiTietHDB.Name = "dgvChiTietHDB";
             this.dgvChiTietHDB.RowHeadersWidth = 51;
             this.dgvChiTietHDB.RowTemplate.Height = 24;
-            this.dgvChiTietHDB.Size = new System.Drawing.Size(453, 507);
+            this.dgvChiTietHDB.Size = new System.Drawing.Size(447, 506);
             this.dgvChiTietHDB.TabIndex = 7;
             // 
             // grbHoaDonBan
@@ -307,11 +312,22 @@
             this.dgvHDB.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellClick);
             this.dgvHDB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDB_CellClick);
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(271, 144);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(84, 27);
+            this.btnLuu.TabIndex = 15;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // HoaDonBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 534);
+            this.ClientSize = new System.Drawing.Size(925, 538);
             this.Controls.Add(this.grbHoaDonBan);
             this.Controls.Add(this.grbChiTietHDB);
             this.Controls.Add(this.grbThongtin);
@@ -357,5 +373,6 @@
         private System.Windows.Forms.GroupBox grbHoaDonBan;
         private System.Windows.Forms.Button btnXemChiTiet;
         private System.Windows.Forms.DataGridView dgvHDB;
+        private System.Windows.Forms.Button btnLuu;
     }
 }
