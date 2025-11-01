@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grbThongTin = new System.Windows.Forms.GroupBox();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
@@ -49,13 +50,16 @@
             this.dgvChiTietHDN = new System.Windows.Forms.DataGridView();
             this.dgvHoaDonBan = new System.Windows.Forms.GroupBox();
             this.dgvHDN = new System.Windows.Forms.DataGridView();
-            this.btnLuu = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.grbThongTin.SuspendLayout();
             this.pnTong.SuspendLayout();
             this.grbChiTietHDN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHDN)).BeginInit();
             this.dgvHoaDonBan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDN)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbThongTin
@@ -73,13 +77,24 @@
             this.grbThongTin.Controls.Add(this.label3);
             this.grbThongTin.Controls.Add(this.label2);
             this.grbThongTin.Controls.Add(this.label1);
+            this.grbThongTin.Dock = System.Windows.Forms.DockStyle.Top;
             this.grbThongTin.Font = new System.Drawing.Font("Times New Roman", 10.2F);
             this.grbThongTin.Location = new System.Drawing.Point(0, 0);
             this.grbThongTin.Name = "grbThongTin";
-            this.grbThongTin.Size = new System.Drawing.Size(462, 166);
+            this.grbThongTin.Size = new System.Drawing.Size(453, 166);
             this.grbThongTin.TabIndex = 0;
             this.grbThongTin.TabStop = false;
             this.grbThongTin.Text = "Thông tin chung";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(269, 134);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(86, 27);
+            this.btnLuu.TabIndex = 20;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSearch
             // 
@@ -195,9 +210,10 @@
             this.pnTong.Controls.Add(this.txtTongTien);
             this.pnTong.Controls.Add(this.btnInHD);
             this.pnTong.Controls.Add(this.label5);
-            this.pnTong.Location = new System.Drawing.Point(3, 505);
+            this.pnTong.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnTong.Location = new System.Drawing.Point(3, 498);
             this.pnTong.Name = "pnTong";
-            this.pnTong.Size = new System.Drawing.Size(445, 46);
+            this.pnTong.Size = new System.Drawing.Size(448, 46);
             this.pnTong.TabIndex = 0;
             // 
             // txtTongTien
@@ -215,7 +231,7 @@
             // 
             this.btnInHD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInHD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInHD.Location = new System.Drawing.Point(320, 8);
+            this.btnInHD.Location = new System.Drawing.Point(322, 8);
             this.btnInHD.Name = "btnInHD";
             this.btnInHD.Size = new System.Drawing.Size(118, 30);
             this.btnInHD.TabIndex = 2;
@@ -238,34 +254,39 @@
             // 
             this.grbChiTietHDN.Controls.Add(this.pnTong);
             this.grbChiTietHDN.Controls.Add(this.dgvChiTietHDN);
+            this.grbChiTietHDN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grbChiTietHDN.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbChiTietHDN.Location = new System.Drawing.Point(468, 0);
+            this.grbChiTietHDN.Location = new System.Drawing.Point(462, 3);
             this.grbChiTietHDN.Name = "grbChiTietHDN";
-            this.grbChiTietHDN.Size = new System.Drawing.Size(451, 554);
+            this.grbChiTietHDN.Size = new System.Drawing.Size(454, 547);
             this.grbChiTietHDN.TabIndex = 1;
             this.grbChiTietHDN.TabStop = false;
             this.grbChiTietHDN.Text = "Chi tiết hóa đơn";
             // 
             // dgvChiTietHDN
             // 
+            this.dgvChiTietHDN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvChiTietHDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChiTietHDN.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvChiTietHDN.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dgvChiTietHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChiTietHDN.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvChiTietHDN.Location = new System.Drawing.Point(3, 23);
             this.dgvChiTietHDN.Name = "dgvChiTietHDN";
             this.dgvChiTietHDN.RowHeadersWidth = 51;
             this.dgvChiTietHDN.RowTemplate.Height = 24;
-            this.dgvChiTietHDN.Size = new System.Drawing.Size(445, 531);
+            this.dgvChiTietHDN.Size = new System.Drawing.Size(445, 528);
             this.dgvChiTietHDN.TabIndex = 1;
             // 
             // dgvHoaDonBan
             // 
             this.dgvHoaDonBan.Controls.Add(this.dgvHDN);
+            this.dgvHoaDonBan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHoaDonBan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvHoaDonBan.Location = new System.Drawing.Point(0, 168);
+            this.dgvHoaDonBan.Location = new System.Drawing.Point(0, 166);
             this.dgvHoaDonBan.Name = "dgvHoaDonBan";
-            this.dgvHoaDonBan.Size = new System.Drawing.Size(462, 386);
+            this.dgvHoaDonBan.Size = new System.Drawing.Size(453, 381);
             this.dgvHoaDonBan.TabIndex = 2;
             this.dgvHoaDonBan.TabStop = false;
             this.dgvHoaDonBan.Text = "Hóa đơn nhập";
@@ -274,33 +295,50 @@
             // 
             this.dgvHDN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHDN.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvHDN.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dgvHDN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHDN.Location = new System.Drawing.Point(0, 26);
+            this.dgvHDN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvHDN.Location = new System.Drawing.Point(3, 23);
             this.dgvHDN.Name = "dgvHDN";
             this.dgvHDN.RowHeadersWidth = 51;
             this.dgvHDN.RowTemplate.Height = 24;
-            this.dgvHDN.Size = new System.Drawing.Size(462, 360);
+            this.dgvHDN.Size = new System.Drawing.Size(447, 355);
             this.dgvHDN.TabIndex = 0;
             this.dgvHDN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDN_CellClick);
             // 
-            // btnLuu
+            // panel1
             // 
-            this.btnLuu.Location = new System.Drawing.Point(269, 134);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(86, 27);
-            this.btnLuu.TabIndex = 20;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.panel1.Controls.Add(this.dgvHoaDonBan);
+            this.panel1.Controls.Add(this.grbThongTin);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(453, 547);
+            this.panel1.TabIndex = 3;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.grbChiTietHDN, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(919, 553);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // HoaDonNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(919, 553);
-            this.Controls.Add(this.dgvHoaDonBan);
-            this.Controls.Add(this.grbChiTietHDN);
-            this.Controls.Add(this.grbThongTin);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HoaDonNhapHang";
             this.Text = "Chi tiết hoá đơn nhập";
@@ -313,6 +351,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietHDN)).EndInit();
             this.dgvHoaDonBan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDN)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -341,5 +381,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

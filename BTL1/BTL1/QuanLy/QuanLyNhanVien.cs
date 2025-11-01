@@ -35,7 +35,7 @@ namespace BTL1
 
         private void LoadData()
         {
-            SqlDataAdapter da = new SqlDataAdapter("select MaNV as [Mã NV], ChucVu as [Chức vụ], TenNV as [Tên NV], Que as [Quê quán], NgaySinh as [Ngày sinh], Email, SDT as [Số điện thoại] from NhanVien;", conn);
+            SqlDataAdapter da = new SqlDataAdapter("select MaNV as [Mã NV], TenNV as [Tên NV], ChucVu as [Chức vụ], Que as [Quê quán], NgaySinh as [Ngày sinh], Email, SDT as [SĐT] from NhanVien;", conn);
             dt = new DataTable();
             da.Fill(dt);
             dgvNhanVien.DataSource = dt;
@@ -85,14 +85,14 @@ namespace BTL1
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string keyword = txtSearch.Text.Trim();
-            SqlDataAdapter da = new SqlDataAdapter("select MaNV as [Mã NV], ChucVu as [Chức vụ], TenNV as [Tên NV], Que as [Quê quán], NgaySinh as [Ngày sinh], Email, SDT as [Số điện thoại] from NhanVien WHERE MaNV LIKE @MaNV", conn);
+            SqlDataAdapter da = new SqlDataAdapter("select MaNV as [Mã NV], TenNV as [Tên NV], ChucVu as [Chức vụ], Que as [Quê quán], NgaySinh as [Ngày sinh], Email, SDT as [SĐT] from NhanVien WHERE MaNV LIKE @MaNV", conn);
             da.SelectCommand.Parameters.AddWithValue("@MaNV", "%" + keyword + "%");
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvNhanVien.DataSource = dt;
-            if (dt.Rows.Count == 0) 
+            if (dt.Rows.Count == 0)
             {
-                da = new SqlDataAdapter("select MaNV as [Mã NV], ChucVu as [Chức vụ], TenNV as [Tên NV], Que as [Quê quán], NgaySinh as [Ngày sinh], Email, SDT as [Số điện thoại] from NhanVien WHERE TenNV LIKE @TenNV", conn);
+                da = new SqlDataAdapter("select MaNV as [Mã NV], TenNV as [Tên NV], ChucVu as [Chức vụ], Que as [Quê quán], NgaySinh as [Ngày sinh], Email, SDT as [SĐT] from NhanVien WHERE TenNV LIKE @TenNV", conn);
                 da.SelectCommand.Parameters.AddWithValue("@TenNV", "%" + keyword + "%");
                 dt = new DataTable();
                 da.Fill(dt);
@@ -203,7 +203,6 @@ namespace BTL1
             btnConfirm.Visible = false;
             action = "";
         }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             Main mainForm = (Main)this.ParentForm;

@@ -241,7 +241,7 @@
             this.grbChucNang.Margin = new System.Windows.Forms.Padding(4);
             this.grbChucNang.Name = "grbChucNang";
             this.grbChucNang.Padding = new System.Windows.Forms.Padding(4);
-            this.grbChucNang.Size = new System.Drawing.Size(932, 86);
+            this.grbChucNang.Size = new System.Drawing.Size(932, 70);
             this.grbChucNang.TabIndex = 1;
             this.grbChucNang.TabStop = false;
             // 
@@ -323,12 +323,12 @@
             this.dgvNhanVien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvNhanVien.Location = new System.Drawing.Point(0, 253);
+            this.dgvNhanVien.Location = new System.Drawing.Point(0, 237);
             this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowTemplate.Height = 24;
-            this.dgvNhanVien.Size = new System.Drawing.Size(932, 282);
+            this.dgvNhanVien.Size = new System.Drawing.Size(932, 298);
             this.dgvNhanVien.TabIndex = 2;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             this.dgvNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
@@ -337,6 +337,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(932, 535);
             this.Controls.Add(this.dgvNhanVien);
             this.Controls.Add(this.grbChucNang);

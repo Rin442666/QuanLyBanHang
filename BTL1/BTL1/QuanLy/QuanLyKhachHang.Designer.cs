@@ -35,6 +35,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.grbKhachHang = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtTongTieuDung = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtTenKH = new System.Windows.Forms.TextBox();
@@ -43,7 +44,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.grbChucNang.SuspendLayout();
             this.grbKhachHang.SuspendLayout();
@@ -55,12 +55,12 @@
             this.dgvKhachHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvKhachHang.Location = new System.Drawing.Point(0, 219);
+            this.dgvKhachHang.Location = new System.Drawing.Point(0, 200);
             this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.RowHeadersWidth = 51;
             this.dgvKhachHang.RowTemplate.Height = 24;
-            this.dgvKhachHang.Size = new System.Drawing.Size(900, 315);
+            this.dgvKhachHang.Size = new System.Drawing.Size(900, 334);
             this.dgvKhachHang.TabIndex = 5;
             this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
             this.dgvKhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
@@ -76,7 +76,7 @@
             this.grbChucNang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grbChucNang.Name = "grbChucNang";
             this.grbChucNang.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grbChucNang.Size = new System.Drawing.Size(900, 94);
+            this.grbChucNang.Size = new System.Drawing.Size(900, 75);
             this.grbChucNang.TabIndex = 4;
             this.grbChucNang.TabStop = false;
             // 
@@ -119,6 +119,7 @@
             // 
             // grbKhachHang
             // 
+            this.grbKhachHang.BackColor = System.Drawing.Color.LightBlue;
             this.grbKhachHang.Controls.Add(this.label3);
             this.grbKhachHang.Controls.Add(this.txtTongTieuDung);
             this.grbKhachHang.Controls.Add(this.txtSDT);
@@ -137,6 +138,17 @@
             this.grbKhachHang.TabIndex = 3;
             this.grbKhachHang.TabStop = false;
             this.grbKhachHang.Text = "Thông tin khách hàng";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.label3.Location = new System.Drawing.Point(733, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 19);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Đồng";
             // 
             // txtTongTieuDung
             // 
@@ -206,21 +218,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã khách hàng:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(733, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 19);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Đồng";
-            // 
             // QuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(900, 534);
             this.Controls.Add(this.dgvKhachHang);
             this.Controls.Add(this.grbChucNang);

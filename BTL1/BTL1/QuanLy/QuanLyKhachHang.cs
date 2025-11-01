@@ -32,7 +32,7 @@ namespace BTL1
 
         private void LoadData()
         {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT MaKH as [Mã KH], TenKH as [Tên KH], SDT as [SĐT], TongTieuDung as [Tổng tiêu dùng] FROM KhachHang", conn);
+            SqlDataAdapter da = new SqlDataAdapter("select MaKH as [Mã KH], TenKH as [Tên KH], SDT as [SĐT], TongTieuDung as [Tổng tiêu dùng] from KhachHang;", conn);
             dtKhachHang = new DataTable();
             da.Fill(dtKhachHang);
             dgvKhachHang.DataSource = dtKhachHang;
@@ -48,16 +48,16 @@ namespace BTL1
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string ma = txtSearch.Text.Trim();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT MaKH as [Mã KH], TenKH as [Tên KH], SDT as [SĐT], TongTieuDung as [Tổng tiêu dùng] FROM KhachHang WHERE MaKH LIKE @ma", conn);
-            da.SelectCommand.Parameters.AddWithValue("@ma", "%" + ma + "%");
+            string keyword = txtSearch.Text.Trim();
+            SqlDataAdapter da = new SqlDataAdapter("select MaKH as [Mã KH], TenKH as [Tên KH], SDT as [SĐT], TongTieuDung as [Tổng tiêu dùng] from KhachHang WHERE MaKH LIKE @ma", conn);
+            da.SelectCommand.Parameters.AddWithValue("@ma", "%" + keyword + "%");
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvKhachHang.DataSource = dt;
             if (dt.Rows.Count == 0)
             {
-                da = new SqlDataAdapter("SELECT MaKH as [Mã KH], TenKH as [Tên KH], SDT as [SĐT], TongTieuDung as [Tổng tiêu dùng] FROM KhachHang WHERE MaKH LIKE @ma", conn);
-                da.SelectCommand.Parameters.AddWithValue("@ma", "%" + ma + "%");
+                da = new SqlDataAdapter("select MaKH as [Mã KH], TenKH as [Tên KH], SDT as [SĐT], TongTieuDung as [Tổng tiêu dùng] from KhachHang WHERE TenKH LIKE @TenKH", conn);
+                da.SelectCommand.Parameters.AddWithValue("@TenKH", "%" + keyword + "%");
                 dt = new DataTable();
                 da.Fill(dt);
                 dgvKhachHang.DataSource = dt;

@@ -34,7 +34,7 @@ namespace BTL1
 
         private void LoadData()
         {
-            da = new SqlDataAdapter("SELECT MaHH as [Mã HH], TenHH as [Tên HH], SLTon as [Số lượng], Gia as [Giá], MoTa as [Mô tả], DonVi as [Đơn vị] FROM HangHoa", conn);
+            da = new SqlDataAdapter("select MaHH as [Mã HH], TenHH as [Tên HH], SLTon as [Số lượng], Gia as [Giá], MoTa as [Mô tả], DonVi as [Đơn vị] from HangHoa;", conn);
             dt = new DataTable();
             da.Fill(dt);
             dgvHangHoa.DataSource = dt;
@@ -113,14 +113,14 @@ namespace BTL1
             btnConfirm.Visible = false;
 
             string keyword = txtSearch.Text.Trim();
-            da = new SqlDataAdapter("SELECT MaHH as [Mã HH], TenHH as [Tên HH], SLTon as [Số lượng], Gia as [Giá], MoTa as [Mô tả], DonVi as [Đơn vị] FROM HangHoa WHERE MaHH LIKE @MaHH", conn);
+            da = new SqlDataAdapter("select MaHH as [Mã HH], TenHH as [Tên HH], SLTon as [Số lượng], Gia as [Giá], MoTa as [Mô tả], DonVi as [Đơn vị] from HangHoa WHERE MaHH LIKE @MaHH", conn);
             da.SelectCommand.Parameters.AddWithValue("@MaHH", "%" + keyword + "%");
             dt = new DataTable();
             da.Fill(dt);
             dgvHangHoa.DataSource = dt;
             if (dt.Rows.Count == 0)
             {
-                da = new SqlDataAdapter("SELECT MaHH as [Mã HH], TenHH as [Tên HH], SLTon as [Số lượng], Gia as [Giá], MoTa as [Mô tả], DonVi as [Đơn vị] FROM HangHoa WHERE TenHH LIKE @TenHH", conn);
+                da = new SqlDataAdapter("select MaHH as [Mã HH], TenHH as [Tên HH], SLTon as [Số lượng], Gia as [Giá], MoTa as [Mô tả], DonVi as [Đơn vị] from HangHoa WHERE TenHH LIKE @TenHH", conn);
                 da.SelectCommand.Parameters.AddWithValue("@TenHH", "%" + keyword + "%");
                 dt = new DataTable();
                 da.Fill(dt);
