@@ -35,7 +35,7 @@ namespace BTL1
 
         private void LoadData()
         {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM NhanVien", conn);
+            SqlDataAdapter da = new SqlDataAdapter("select MaNV as [Mã NV], ChucVu as [Chức vụ], TenNV as [Tên NV], Que as [Quê quán], NgaySinh as [Ngày sinh], Email, SDT as [Số điện thoại] from NhanVien;", conn);
             dt = new DataTable();
             da.Fill(dt);
             dgvNhanVien.DataSource = dt;
@@ -68,14 +68,14 @@ namespace BTL1
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvNhanVien.Rows[e.RowIndex];
-                txtMaNV.Text = row.Cells["MaNV"].Value.ToString();
-                txtTenNV.Text = row.Cells["TenNV"].Value.ToString();
-                txtChucVu.Text = row.Cells["ChucVu"].Value.ToString();
+                txtMaNV.Text = row.Cells["Mã NV"].Value.ToString();
+                txtTenNV.Text = row.Cells["Tên NV"].Value.ToString();
+                txtChucVu.Text = row.Cells["Chức vụ"].Value.ToString();
                 txtMail.Text = row.Cells["Email"].Value.ToString();
-                txtSDT.Text = row.Cells["SDT"].Value.ToString();
-                txtQue.Text = row.Cells["Que"].Value.ToString();
-                if (row.Cells["NgaySinh"].Value != DBNull.Value)
-                    dtNgaySinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
+                txtSDT.Text = row.Cells["SĐT"].Value.ToString();
+                txtQue.Text = row.Cells["Quê quán"].Value.ToString();
+                if (row.Cells["Ngày sinh"].Value != DBNull.Value)
+                    dtNgaySinh.Value = Convert.ToDateTime(row.Cells["Ngày sinh"].Value);
 
                 btnEdit.Enabled = true;
                 btnClear.Enabled = true;
@@ -84,13 +84,20 @@ namespace BTL1
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string ma = txtSearch.Text.Trim();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM NhanVien WHERE MaNV LIKE @ma", conn);
-            da.SelectCommand.Parameters.AddWithValue("@ma", "%" + ma + "%");
+            string keyword = txtSearch.Text.Trim();
+            SqlDataAdapter da = new SqlDataAdapter("select MaNV as [Mã NV], ChucVu as [Chức vụ], TenNV as [Tên NV], Que as [Quê quán], NgaySinh as [Ngày sinh], Email, SDT as [Số điện thoại] from NhanVien WHERE MaNV LIKE @MaNV", conn);
+            da.SelectCommand.Parameters.AddWithValue("@MaNV", "%" + keyword + "%");
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvNhanVien.DataSource = dt;
-
+            if (dt.Rows.Count == 0) 
+            {
+                da = new SqlDataAdapter("select MaNV as [Mã NV], ChucVu as [Chức vụ], TenNV as [Tên NV], Que as [Quê quán], NgaySinh as [Ngày sinh], Email, SDT as [Số điện thoại] from NhanVien WHERE TenNV LIKE @TenNV", conn);
+                da.SelectCommand.Parameters.AddWithValue("@TenNV", "%" + keyword + "%");
+                dt = new DataTable();
+                da.Fill(dt);
+                dgvNhanVien.DataSource = dt;
+            }
             SetInputEnabled(false);
             btnConfirm.Visible = false;
         }
@@ -196,6 +203,7 @@ namespace BTL1
             btnConfirm.Visible = false;
             action = "";
         }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             Main mainForm = (Main)this.ParentForm;

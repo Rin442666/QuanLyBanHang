@@ -246,6 +246,9 @@
     <Compile Include="QuanLy\QuanLyNhanVien.Designer.cs">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <None Include="Database\QLBH.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

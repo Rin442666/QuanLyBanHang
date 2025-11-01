@@ -34,7 +34,7 @@ namespace BTL1
 
         private void LoadData()
         {
-            da = new SqlDataAdapter("SELECT * FROM HangHoa", conn);
+            da = new SqlDataAdapter("SELECT MaHH as [Mã HH], TenHH as [Tên HH], SLTon as [Số lượng], Gia as [Giá], MoTa as [Mô tả], DonVi as [Đơn vị] FROM HangHoa", conn);
             dt = new DataTable();
             da.Fill(dt);
             dgvHangHoa.DataSource = dt;
@@ -113,14 +113,14 @@ namespace BTL1
             btnConfirm.Visible = false;
 
             string keyword = txtSearch.Text.Trim();
-            da = new SqlDataAdapter("SELECT * FROM HangHoa WHERE MaHH LIKE @MaHH", conn);
+            da = new SqlDataAdapter("SELECT MaHH as [Mã HH], TenHH as [Tên HH], SLTon as [Số lượng], Gia as [Giá], MoTa as [Mô tả], DonVi as [Đơn vị] FROM HangHoa WHERE MaHH LIKE @MaHH", conn);
             da.SelectCommand.Parameters.AddWithValue("@MaHH", "%" + keyword + "%");
             dt = new DataTable();
             da.Fill(dt);
             dgvHangHoa.DataSource = dt;
             if (dt.Rows.Count == 0)
             {
-                da = new SqlDataAdapter("SELECT * FROM HangHoa WHERE TenHH LIKE @TenHH", conn);
+                da = new SqlDataAdapter("SELECT MaHH as [Mã HH], TenHH as [Tên HH], SLTon as [Số lượng], Gia as [Giá], MoTa as [Mô tả], DonVi as [Đơn vị] FROM HangHoa WHERE TenHH LIKE @TenHH", conn);
                 da.SelectCommand.Parameters.AddWithValue("@TenHH", "%" + keyword + "%");
                 dt = new DataTable();
                 da.Fill(dt);
@@ -190,12 +190,12 @@ namespace BTL1
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvHangHoa.Rows[e.RowIndex];
-                txtMaHang.Text = row.Cells["MaHH"].Value.ToString();
-                txtTenHang.Text = row.Cells["TenHH"].Value.ToString();
-                txtDonGia.Text = row.Cells["Gia"].Value.ToString();
-                txtSoLuong.Text = row.Cells["SLTon"].Value.ToString();
-                txtDonVi.Text = row.Cells["DonVi"].Value.ToString();
-                txtMoTa.Text = row.Cells["MoTa"].Value.ToString();
+                txtMaHang.Text = row.Cells["Mã HH"].Value.ToString();
+                txtTenHang.Text = row.Cells["Tên HH"].Value.ToString();
+                txtDonGia.Text = row.Cells["Giá"].Value.ToString();
+                txtSoLuong.Text = row.Cells["Số lượng"].Value.ToString();
+                txtDonVi.Text = row.Cells["Đơn vị"].Value.ToString();
+                txtMoTa.Text = row.Cells["Mô tả"].Value.ToString();
             }
         }
         

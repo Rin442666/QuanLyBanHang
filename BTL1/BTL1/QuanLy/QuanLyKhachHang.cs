@@ -32,7 +32,7 @@ namespace BTL1
 
         private void LoadData()
         {
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM KhachHang", conn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT MaKH as [Mã KH], TenKH as [Tên KH], SDT as [SĐT], TongTieuDung as [Tổng tiêu dùng] FROM KhachHang", conn);
             dtKhachHang = new DataTable();
             da.Fill(dtKhachHang);
             dgvKhachHang.DataSource = dtKhachHang;
@@ -49,16 +49,16 @@ namespace BTL1
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string ma = txtSearch.Text.Trim();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM KhachHang WHERE MaKH LIKE @ma", conn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT MaKH as [Mã KH], TenKH as [Tên KH], SDT as [SĐT], TongTieuDung as [Tổng tiêu dùng] FROM KhachHang WHERE MaKH LIKE @ma", conn);
             da.SelectCommand.Parameters.AddWithValue("@ma", "%" + ma + "%");
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvKhachHang.DataSource = dt;
             if (dt.Rows.Count == 0)
             {
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM KhachHang WHERE MaKH LIKE @ma", conn);
+                da = new SqlDataAdapter("SELECT MaKH as [Mã KH], TenKH as [Tên KH], SDT as [SĐT], TongTieuDung as [Tổng tiêu dùng] FROM KhachHang WHERE MaKH LIKE @ma", conn);
                 da.SelectCommand.Parameters.AddWithValue("@ma", "%" + ma + "%");
-                DataTable dt = new DataTable();
+                dt = new DataTable();
                 da.Fill(dt);
                 dgvKhachHang.DataSource = dt;
             }
@@ -70,10 +70,10 @@ namespace BTL1
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvKhachHang.Rows[e.RowIndex];
-                txtMaKH.Text = row.Cells["MaKH"].Value.ToString();
-                txtTenKH.Text = row.Cells["TenKH"].Value.ToString();
-                txtSDT.Text = row.Cells["SDT"].Value.ToString();
-                txtTongTieuDung.Text = row.Cells["TongTieuDung"].Value.ToString();
+                txtMaKH.Text = row.Cells["Mã KH"].Value.ToString();
+                txtTenKH.Text = row.Cells["Tên KH"].Value.ToString();
+                txtSDT.Text = row.Cells["SĐT"].Value.ToString();
+                txtTongTieuDung.Text = row.Cells["Tổng tiêu dùng"].Value.ToString();
             }
         }
 

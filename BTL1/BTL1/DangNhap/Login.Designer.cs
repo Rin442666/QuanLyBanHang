@@ -45,7 +45,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackColor = System.Drawing.Color.LightBlue;
             this.panel2.Controls.Add(this.lblTieuDeDN);
             this.panel2.Controls.Add(this.txtUser);
             this.panel2.Controls.Add(this.txtPass);
@@ -64,7 +64,7 @@
             // 
             this.lblTieuDeDN.AutoSize = true;
             this.lblTieuDeDN.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDeDN.Location = new System.Drawing.Point(90, 9);
+            this.lblTieuDeDN.Location = new System.Drawing.Point(90, 16);
             this.lblTieuDeDN.Name = "lblTieuDeDN";
             this.lblTieuDeDN.Size = new System.Drawing.Size(307, 53);
             this.lblTieuDeDN.TabIndex = 2;
@@ -97,6 +97,7 @@
             // 
             // btnBack
             // 
+            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBack.Location = new System.Drawing.Point(203, 439);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(94, 35);
@@ -139,7 +140,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::BTL1.Properties.Resources._437927798_404093782372543_6879839883003334778_n;
+            this.pictureBox1.Image = global::BTL1.Properties.Resources.pngtree_shopping_mall_supermarket_selection_merchandise_poster_background_material_image_133225;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(790, 539);
@@ -156,8 +157,9 @@
             this.ClientSize = new System.Drawing.Size(790, 539);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(808, 586);
+            this.MinimumSize = new System.Drawing.Size(808, 586);
             this.Name = "Login";
             this.Text = "Login";
             this.panel2.ResumeLayout(false);
