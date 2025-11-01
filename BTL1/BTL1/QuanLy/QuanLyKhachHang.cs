@@ -51,11 +51,17 @@ namespace BTL1
             string ma = txtSearch.Text.Trim();
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM KhachHang WHERE MaKH LIKE @ma", conn);
             da.SelectCommand.Parameters.AddWithValue("@ma", "%" + ma + "%");
-
             DataTable dt = new DataTable();
             da.Fill(dt);
             dgvKhachHang.DataSource = dt;
-
+            if (dt.Rows.Count == 0)
+            {
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM KhachHang WHERE MaKH LIKE @ma", conn);
+                da.SelectCommand.Parameters.AddWithValue("@ma", "%" + ma + "%");
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dgvKhachHang.DataSource = dt;
+            }
             SetInputEnabled(false);
         }
 

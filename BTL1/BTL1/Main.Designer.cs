@@ -64,7 +64,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(910, 494);
+            this.panel1.Size = new System.Drawing.Size(913, 494);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -79,7 +79,7 @@
             this.gbxChucNang.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gbxChucNang.Location = new System.Drawing.Point(0, 193);
             this.gbxChucNang.Name = "gbxChucNang";
-            this.gbxChucNang.Size = new System.Drawing.Size(910, 301);
+            this.gbxChucNang.Size = new System.Drawing.Size(913, 301);
             this.gbxChucNang.TabIndex = 3;
             this.gbxChucNang.TabStop = false;
             this.gbxChucNang.Text = "Chức năng:";
@@ -161,7 +161,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(910, 147);
+            this.panel3.Size = new System.Drawing.Size(913, 147);
             this.panel3.TabIndex = 2;
             // 
             // label4

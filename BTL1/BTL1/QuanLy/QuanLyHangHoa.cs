@@ -118,6 +118,14 @@ namespace BTL1
             dt = new DataTable();
             da.Fill(dt);
             dgvHangHoa.DataSource = dt;
+            if (dt.Rows.Count == 0)
+            {
+                da = new SqlDataAdapter("SELECT * FROM HangHoa WHERE TenHH LIKE @TenHH", conn);
+                da.SelectCommand.Parameters.AddWithValue("@TenHH", "%" + keyword + "%");
+                dt = new DataTable();
+                da.Fill(dt);
+                dgvHangHoa.DataSource = dt;
+            }
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
