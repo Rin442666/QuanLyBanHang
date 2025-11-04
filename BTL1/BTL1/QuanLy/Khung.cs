@@ -45,7 +45,7 @@ namespace BTL1.QuanLy
                 quyen = "Nhân Viên";
             else
                 quyen = "Quản Lý";
-            lblWelcome.Text = "Xin Chào " + loggedInUser.Name +" (" + quyen + ")";
+            lblWelcome.Text = "Xin Chào " + quyen + " : " + loggedInUser.Name ;
         }
 
         private void Logo_Click(object sender, EventArgs e)
