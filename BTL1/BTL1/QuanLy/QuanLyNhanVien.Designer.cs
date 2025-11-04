@@ -346,7 +346,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyNhanVien";
-            this.Text = "QuanLyNhanVien";
+            this.Text = "Quản Lý Nhân Viên";
             this.Load += new System.EventHandler(this.QuanLyNhanVien_Load);
             this.grbThongTinNV.ResumeLayout(false);
             this.grbThongTinNV.PerformLayout();

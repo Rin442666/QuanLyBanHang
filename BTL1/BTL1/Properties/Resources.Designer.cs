@@ -63,6 +63,16 @@ namespace BTL1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1280x1024_2407b512f6f2eec61cd2f3136242a025 {
+            get {
+                object obj = ResourceManager.GetObject("1280x1024-2407b512f6f2eec61cd2f3136242a025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _437927798_404093782372543_6879839883003334778_n {
             get {
                 object obj = ResourceManager.GetObject("437927798_404093782372543_6879839883003334778_n", resourceCulture);
@@ -96,6 +106,16 @@ namespace BTL1.Properties {
         internal static System.Drawing.Bitmap istockphoto_1435513729_612x612_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-1435513729-612x612-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo {
+            get {
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

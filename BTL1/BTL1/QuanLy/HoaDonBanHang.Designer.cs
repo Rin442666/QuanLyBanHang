@@ -35,7 +35,6 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnTaoHD = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.txtMaKH = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpBan = new System.Windows.Forms.DateTimePicker();
@@ -74,7 +73,6 @@
             this.grbThongtin.Controls.Add(this.lblSearch);
             this.grbThongtin.Controls.Add(this.btnSearch);
             this.grbThongtin.Controls.Add(this.btnTaoHD);
-            this.grbThongtin.Controls.Add(this.btnBack);
             this.grbThongtin.Controls.Add(this.txtMaKH);
             this.grbThongtin.Controls.Add(this.label6);
             this.grbThongtin.Controls.Add(this.dtpBan);
@@ -95,7 +93,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(271, 144);
+            this.btnLuu.Location = new System.Drawing.Point(319, 144);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(84, 27);
@@ -144,24 +142,13 @@
             // 
             // btnTaoHD
             // 
-            this.btnTaoHD.Location = new System.Drawing.Point(133, 144);
+            this.btnTaoHD.Location = new System.Drawing.Point(157, 144);
             this.btnTaoHD.Name = "btnTaoHD";
             this.btnTaoHD.Size = new System.Drawing.Size(132, 27);
             this.btnTaoHD.TabIndex = 10;
             this.btnTaoHD.Text = "Tạo hóa đơn mới";
             this.btnTaoHD.UseVisualStyleBackColor = true;
             this.btnTaoHD.Click += new System.EventHandler(this.btnTaoHD_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(361, 144);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(84, 27);
-            this.btnBack.TabIndex = 1;
-            this.btnBack.Text = "Thoát";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // txtMaKH
             // 
@@ -376,7 +363,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "HoaDonBanHang";
-            this.Text = "Chi tiết hóa đơn bán hàng";
+            this.Text = "Hóa Đơn Bán Hàng";
             this.Load += new System.EventHandler(this.HoaDonBanHang_Load);
             this.grbThongtin.ResumeLayout(false);
             this.grbThongtin.PerformLayout();
@@ -403,7 +390,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grbChiTietHDB;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel pnTong;
         private System.Windows.Forms.Button btnInHD;
         private System.Windows.Forms.Label lblTongTien;

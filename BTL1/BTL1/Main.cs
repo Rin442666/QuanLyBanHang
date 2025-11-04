@@ -1,4 +1,5 @@
 ﻿using BTL1.DangNhap;
+using BTL1.QuanLy;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,19 +28,7 @@ namespace BTL1
             NotLogged();
         }
 
-        private void LoadForm(Form form)
-        {
-            Home(false);
-
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-
-            panel1.Controls.Add(form);
-            form.Show();
-        }
-
-        private void NotLogged()
+        public void NotLogged()
         {
             if (loggedInUser == null)
             {
@@ -61,9 +50,9 @@ namespace BTL1
                 lblUserName.Text = loggedInUser.Name;
                 btnLogIn.Visible = false;
                 btnLogOut.Visible = true;
-                string quyen = loggedInUser.Authority;
+                string Authority = loggedInUser.Authority;
 
-                if (quyen == "Admin" || quyen == "QuanLy")
+                if (Authority == "QuanLy")
                 {
                     btnQLHDB.Enabled = true;
                     btnQLKH.Enabled = true;
@@ -71,7 +60,7 @@ namespace BTL1
                     btnQLHH.Enabled = true;
                     btnQLHDN.Enabled = true;
                 }
-                else if (quyen == "NhanVien")
+                else if (Authority == "NhanVien")
                 {
                     btnQLHDB.Enabled = true;
                     btnQLKH.Enabled = true;
@@ -92,17 +81,27 @@ namespace BTL1
 
         private void btnQLKH_Click(object sender, EventArgs e)
         {
-            LoadForm(new QuanLyKhachHang());
+            KhungCaller(new QuanLyKhachHang());
         }
 
         private void btnQLNV_Click(object sender, EventArgs e)
         {
-            LoadForm(new QuanLyNhanVien());
+            KhungCaller(new QuanLyNhanVien());
         }
 
         private void btnQLHH_Click(object sender, EventArgs e)
         {
-            LoadForm(new QuanLyHangHoa());
+            KhungCaller(new QuanLyHangHoa());
+        }
+
+        private void btnQLHDB_Click(object sender, EventArgs e)
+        {
+            KhungCaller(new HoaDonBanHang());
+        }
+
+        private void btnQLHDN_Click(object sender, EventArgs e)
+        {
+            KhungCaller(new HoaDonNhapHang());
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -139,24 +138,14 @@ namespace BTL1
             NotLogged();
         }
 
-        private void btnQLHDB_Click(object sender, EventArgs e)
+
+        private void KhungCaller(Form childForm)
         {
-            LoadForm(new HoaDonBanHang());
+            Khung khung = new Khung(loggedInUser);
+            khung.LoadChildForm(childForm);
+            khung.ShowDialog();
         }
 
-        private void btnQLHDN_Click(object sender, EventArgs e)
-        {
-            LoadForm(new HoaDonNhapHang());
-        }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

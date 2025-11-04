@@ -57,15 +57,14 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.gbxChucNang);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.gbxChucNang);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(928, 588);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // gbxChucNang
             // 
@@ -81,9 +80,9 @@
             this.gbxChucNang.Controls.Add(this.btnQLNV);
             this.gbxChucNang.Controls.Add(this.btnQLKH);
             this.gbxChucNang.Controls.Add(this.btnQLHH);
-            this.gbxChucNang.Location = new System.Drawing.Point(0, 148);
+            this.gbxChucNang.Location = new System.Drawing.Point(0, 136);
             this.gbxChucNang.Name = "gbxChucNang";
-            this.gbxChucNang.Size = new System.Drawing.Size(929, 451);
+            this.gbxChucNang.Size = new System.Drawing.Size(929, 463);
             this.gbxChucNang.TabIndex = 3;
             this.gbxChucNang.TabStop = false;
             // 
@@ -96,9 +95,9 @@
             this.panel2.Controls.Add(this.lblTen);
             this.panel2.Controls.Add(this.btnLogOut);
             this.panel2.Controls.Add(this.btnLogIn);
-            this.panel2.Location = new System.Drawing.Point(501, 3);
+            this.panel2.Location = new System.Drawing.Point(623, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(427, 66);
+            this.panel2.Size = new System.Drawing.Size(309, 66);
             this.panel2.TabIndex = 8;
             // 
             // lblUserName
@@ -121,7 +120,7 @@
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(327, 12);
+            this.btnLogOut.Location = new System.Drawing.Point(189, 12);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(94, 40);
@@ -132,10 +131,10 @@
             // 
             // btnLogIn
             // 
-            this.btnLogIn.Location = new System.Drawing.Point(214, 12);
+            this.btnLogIn.Location = new System.Drawing.Point(188, 12);
             this.btnLogIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(101, 40);
+            this.btnLogIn.Size = new System.Drawing.Size(94, 40);
             this.btnLogIn.TabIndex = 0;
             this.btnLogIn.Text = "Đăng Nhập";
             this.btnLogIn.UseVisualStyleBackColor = true;
@@ -160,11 +159,11 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(812, 410);
+            this.btnClose.Location = new System.Drawing.Point(802, 411);
             this.btnClose.MaximumSize = new System.Drawing.Size(140, 49);
             this.btnClose.MinimumSize = new System.Drawing.Size(116, 32);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(116, 32);
+            this.btnClose.Size = new System.Drawing.Size(121, 38);
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "Thoát";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -354,16 +353,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox gbxChucNang;
-        private TransparentPanel panel2;
-        private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.Label lblTen;
-        private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.Button btnQLHDN;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnQLHDB;
         private System.Windows.Forms.Button btnQLNV;
         private System.Windows.Forms.Button btnQLKH;
         private System.Windows.Forms.Button btnQLHH;
+        private TransparentPanel panel2;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblTen;
+        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnLogIn;
     }
 }

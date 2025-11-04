@@ -30,7 +30,6 @@
         {
             this.dgvHangHoa = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -74,7 +73,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnBack);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.btnClear);
             this.groupBox2.Controls.Add(this.btnEdit);
@@ -90,16 +88,6 @@
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(804, 15);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(84, 28);
-            this.btnBack.TabIndex = 6;
-            this.btnBack.Text = "Thoát";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(409, 15);
@@ -112,7 +100,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(686, 16);
+            this.btnClear.Location = new System.Drawing.Point(778, 16);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(84, 27);
@@ -123,7 +111,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(596, 16);
+            this.btnEdit.Location = new System.Drawing.Point(654, 15);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(84, 27);
@@ -134,7 +122,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(506, 15);
+            this.btnAdd.Location = new System.Drawing.Point(533, 16);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(84, 27);
@@ -179,7 +167,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 10, 4);
             this.groupBox1.Size = new System.Drawing.Size(900, 238);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -188,9 +176,9 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(737, 178);
+            this.btnConfirm.Location = new System.Drawing.Point(654, 175);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(109, 28);
+            this.btnConfirm.Size = new System.Drawing.Size(117, 42);
             this.btnConfirm.TabIndex = 12;
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.UseVisualStyleBackColor = true;
@@ -201,7 +189,7 @@
             this.txtDonVi.Location = new System.Drawing.Point(383, 175);
             this.txtDonVi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDonVi.Name = "txtDonVi";
-            this.txtDonVi.Size = new System.Drawing.Size(117, 27);
+            this.txtDonVi.Size = new System.Drawing.Size(147, 27);
             this.txtDonVi.TabIndex = 11;
             // 
             // label7
@@ -312,7 +300,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "QuanLyHangHoa";
-            this.Text = "QuanLyHangHoa";
+            this.Text = "Quản Lý Hàng Hóa";
             this.Load += new System.EventHandler(this.QuanLyHangHoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -345,8 +333,7 @@
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

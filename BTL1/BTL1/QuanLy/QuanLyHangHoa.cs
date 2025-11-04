@@ -18,6 +18,7 @@ namespace BTL1
         SqlDataAdapter da;
         DataTable dt;
         string action = "";
+        public string Title = "Quản Lý Hóa Đơn Bán Hàng";
         public QuanLyHangHoa()
         {
             InitializeComponent();

@@ -71,15 +71,6 @@ namespace BTL1.DangNhap
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) { }
         private void panel2_Paint(object sender, PaintEventArgs e) { }
 
-        private void btnGoRegister_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLogin_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
 
         private void btnLogin_KeyDown(object sender, KeyEventArgs e)
         {

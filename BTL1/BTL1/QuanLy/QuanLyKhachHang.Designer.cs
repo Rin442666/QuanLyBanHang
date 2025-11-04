@@ -30,7 +30,6 @@
         {
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.grbChucNang = new System.Windows.Forms.GroupBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -67,7 +66,6 @@
             // 
             // grbChucNang
             // 
-            this.grbChucNang.Controls.Add(this.btnBack);
             this.grbChucNang.Controls.Add(this.btnSearch);
             this.grbChucNang.Controls.Add(this.label6);
             this.grbChucNang.Controls.Add(this.txtSearch);
@@ -80,19 +78,9 @@
             this.grbChucNang.TabIndex = 4;
             this.grbChucNang.TabStop = false;
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(737, 32);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(93, 30);
-            this.btnBack.TabIndex = 7;
-            this.btnBack.Text = "Thoát";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(490, 35);
+            this.btnSearch.Location = new System.Drawing.Point(499, 32);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(91, 30);
             this.btnSearch.TabIndex = 6;
@@ -231,7 +219,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "QuanLyKhachHang";
-            this.Text = "QuanLyKhachHang";
+            this.Text = "Quản Lý Khách Hàng";
             this.Load += new System.EventHandler(this.QuanLyKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).EndInit();
             this.grbChucNang.ResumeLayout(false);
@@ -258,7 +246,6 @@
         private System.Windows.Forms.TextBox txtTongTieuDung;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label3;
     }
 }

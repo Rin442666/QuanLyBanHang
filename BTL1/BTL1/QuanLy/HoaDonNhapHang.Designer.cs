@@ -341,7 +341,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HoaDonNhapHang";
-            this.Text = "Chi tiết hoá đơn nhập";
+            this.Text = "Hóa Đơn Nhập Hàng";
             this.Load += new System.EventHandler(this.HoaDonNhapHang_Load);
             this.grbThongTin.ResumeLayout(false);
             this.grbThongTin.PerformLayout();
