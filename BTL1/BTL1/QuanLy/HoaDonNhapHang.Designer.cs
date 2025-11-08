@@ -35,7 +35,6 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.btnTaoHD = new System.Windows.Forms.Button();
             this.btnXemChiTiet = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.dtpNhap = new System.Windows.Forms.DateTimePicker();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtMaHDN = new System.Windows.Forms.TextBox();
@@ -70,7 +69,6 @@
             this.grbThongTin.Controls.Add(this.lblSearch);
             this.grbThongTin.Controls.Add(this.btnTaoHD);
             this.grbThongTin.Controls.Add(this.btnXemChiTiet);
-            this.grbThongTin.Controls.Add(this.btnBack);
             this.grbThongTin.Controls.Add(this.dtpNhap);
             this.grbThongTin.Controls.Add(this.txtMaNV);
             this.grbThongTin.Controls.Add(this.txtMaHDN);
@@ -88,7 +86,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(269, 134);
+            this.btnLuu.Location = new System.Drawing.Point(346, 133);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(86, 27);
             this.btnLuu.TabIndex = 20;
@@ -125,7 +123,7 @@
             // 
             // btnTaoHD
             // 
-            this.btnTaoHD.Location = new System.Drawing.Point(133, 134);
+            this.btnTaoHD.Location = new System.Drawing.Point(166, 134);
             this.btnTaoHD.Name = "btnTaoHD";
             this.btnTaoHD.Size = new System.Drawing.Size(132, 27);
             this.btnTaoHD.TabIndex = 16;
@@ -135,24 +133,15 @@
             // 
             // btnXemChiTiet
             // 
+            this.btnXemChiTiet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnXemChiTiet.Location = new System.Drawing.Point(16, 134);
             this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXemChiTiet.Name = "btnXemChiTiet";
-            this.btnXemChiTiet.Size = new System.Drawing.Size(111, 27);
+            this.btnXemChiTiet.Size = new System.Drawing.Size(119, 27);
             this.btnXemChiTiet.TabIndex = 15;
             this.btnXemChiTiet.Text = "Xem chi tiết";
             this.btnXemChiTiet.UseVisualStyleBackColor = true;
             this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(361, 134);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(86, 26);
-            this.btnBack.TabIndex = 1;
-            this.btnBack.Text = "Thoát";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // dtpNhap
             // 
@@ -366,7 +355,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel pnTong;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnInHD;

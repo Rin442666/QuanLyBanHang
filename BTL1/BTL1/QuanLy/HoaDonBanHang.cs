@@ -344,25 +344,20 @@ namespace BTL1
 
         private void btnTaoHD_Click(object sender, EventArgs e)
         {
-            txtMaHDB.Text = GetNewMaHD();
-            txtMaNV.Text = "";
-            txtTongTien.Text = "0";
-            dtpBan.Value = DateTime.Now;
-            txtMaKH.Text = "";
+            string maHDBMoi = GetNewMaHD();
 
-            txtMaKH.Enabled = true;
-            txtMaNV.Enabled = true;
-            btnLuu.Visible = true;
+            // 2. Mở Form mới (dạng Dialog) và truyền mã + chuỗi kết nối
+            addHDB dialogChonHang = new addHDB(maHDBMoi, connStr);
 
-            if (dgvChiTietHDB.DataSource is DataTable dtChiTiet)
+            // 3. Hiển thị Dialog
+            DialogResult result = dialogChonHang.ShowDialog();
+
+            // 4. Nếu Dialog đóng với kết quả OK (tức là đã LƯU THÀNH CÔNG)
+            if (result == DialogResult.OK)
             {
-                dtChiTiet.Clear();
+                // Tải lại danh sách hóa đơn (dgvHDB) để thấy hóa đơn mới
+                LoadData();
             }
-            else
-            {
-                dgvChiTietHDB.DataSource = null;
-            }
-            txtMaNV.Focus();
         }
 
         private bool ValidateInput()
