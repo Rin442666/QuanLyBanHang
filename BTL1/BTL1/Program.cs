@@ -12,7 +12,7 @@ namespace BTL1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            AppDomain.CurrentDomain.SetData("BaseDirectory", AppDomain.CurrentDomain.BaseDirectory.Replace(@"\bin\Debug\", ""));
+
 
             string connectionString =
                 @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database\QLBH.mdf;Integrated Security=True";
@@ -23,6 +23,8 @@ namespace BTL1
                 Path.Combine(baseDir, "Trigger_HH.sql"),
                 Path.Combine(baseDir, "Trigger_HDB.sql"),
                 Path.Combine(baseDir, "Trigger_CTHDN.sql"),
+                Path.Combine(baseDir, "Trigger_SLHDN.sql"),
+                Path.Combine(baseDir, "Trigger_SLHDB.sql"),
                 Path.Combine(baseDir, "Trigger_CTHDB.sql")
             };
 

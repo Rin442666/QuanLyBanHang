@@ -7,6 +7,8 @@ after insert, update, delete
 as
 begin
     set nocount on;
+    if TRIGGER_NESTLEVEL() > 1
+        return;
     update KhachHang
     set TongTieuDung = (
         select sum(hdb.TongTien)
