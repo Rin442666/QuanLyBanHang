@@ -1,19 +1,30 @@
-if OBJECT_ID('trg_CapNhatSoLuongHangBan', 'TR') IS NOT NULL
-    DROP TRIGGER trg_CapNhatSoLuongHangBan;
-go
-create trigger trg_CapNhatSoLuongHangBan
-on ChiTietHDB
-after insert, update, delete
-as
-begin
-    set nocount on;
+DROP TRIGGER IF EXISTS trg_CapNhatTongTien_HDB;
+GO
+CREATE TRIGGER trg_CapNhatTongTien_HDB
+ON dbo.ChiTietHDB
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
     IF TRIGGER_NESTLEVEL() > 1
         RETURN;
-    update HangHoa
-    set SLTon = SLTon - isnull(i.SLBan,0) + isnull(d.SLBan,0)
-    from HangHoa h
-    left join inserted i on h.MaHH = i.MaHH
-    left join deleted d on h.MaHH = d.MaHH
-    where i.MaHH is not null or d.MaHH is not null;
-end;
-go
+    DECLARE @MaHDBAffected TABLE (MaHDB NVARCHAR(10) PRIMARY KEY);
+    INSERT INTO @MaHDBAffected (MaHDB)
+    SELECT MaHDB FROM inserted
+    UNION
+    SELECT MaHDB FROM deleted;
+    WITH CTE_TongTienMoi AS (
+        SELECT 
+            ct.MaHDB, 
+            SUM(ct.SLBan * hh.Gia) AS SumTienMoi
+        FROM dbo.ChiTietHDB AS ct
+        INNER JOIN dbo.HangHoa AS hh ON hh.MaHH = ct.MaHH
+        INNER JOIN @MaHDBAffected AS affected ON affected.MaHDB = ct.MaHDB
+        GROUP BY ct.MaHDB
+    )
+    UPDATE hdb
+    SET hdb.TongTien = ISNULL(cte.SumTienMoi, 0)
+    FROM dbo.HoaDonBan AS hdb
+    INNER JOIN @MaHDBAffected AS affected ON hdb.MaHDB = affected.MaHDB
+    LEFT JOIN CTE_TongTienMoi AS cte ON hdb.MaHDB = cte.MaHDB;
+END;

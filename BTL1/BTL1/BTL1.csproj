@@ -269,8 +269,12 @@
     <Compile Include="Resources\TransparentPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Content Include="Database\Trigger_SLHDB.sql" />
-    <Content Include="Database\Trigger_SLHDN.sql" />
+    <Content Include="Database\Trigger_SLHDB.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\Trigger_SLHDN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\1280x1024-2407b512f6f2eec61cd2f3136242a025.gif" />
     <Content Include="Resources\logo.png" />
     <None Include="Database\QLBH.mdf">
@@ -279,10 +283,18 @@
     <None Include="Database\QLBH_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Database\Trigger_CTHDB.sql" />
-    <Content Include="Database\Trigger_CTHDN.sql" />
-    <Content Include="Database\Trigger_HDB.sql" />
-    <Content Include="Database\Trigger_HH.sql" />
+    <Content Include="Database\Trigger_CTHDB.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\Trigger_CTHDN.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\Trigger_HDB.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\Trigger_HH.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="DangNhap\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>

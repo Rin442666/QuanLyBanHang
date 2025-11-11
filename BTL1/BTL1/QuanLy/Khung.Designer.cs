@@ -59,18 +59,19 @@
             this.panel1.Controls.Add(this.Logo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1076, 150);
+            this.panel1.Size = new System.Drawing.Size(1210, 178);
             this.panel1.TabIndex = 0;
             // 
             // lblWelcome
             // 
             this.lblWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(626, 117);
+            this.lblWelcome.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(704, 139);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(64, 25);
+            this.lblWelcome.Size = new System.Drawing.Size(60, 22);
             this.lblWelcome.TabIndex = 3;
             this.lblWelcome.Text = "label1";
             // 
@@ -78,9 +79,10 @@
             // 
             this.splitter2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.splitter2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter2.Location = new System.Drawing.Point(0, 145);
+            this.splitter2.Location = new System.Drawing.Point(0, 172);
+            this.splitter2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(1076, 5);
+            this.splitter2.Size = new System.Drawing.Size(1210, 6);
             this.splitter2.TabIndex = 2;
             this.splitter2.TabStop = false;
             // 
@@ -88,10 +90,10 @@
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(463, 9);
+            this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(521, 11);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(121, 38);
+            this.lblTitle.Size = new System.Drawing.Size(128, 38);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "jpdiada";
             // 
@@ -100,9 +102,10 @@
             this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.ErrorImage = null;
             this.Logo.Image = global::BTL1.Properties.Resources.Logo;
-            this.Logo.Location = new System.Drawing.Point(-3, -16);
+            this.Logo.Location = new System.Drawing.Point(-3, -19);
+            this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(217, 175);
+            this.Logo.Size = new System.Drawing.Size(244, 208);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Logo.TabIndex = 1;
             this.Logo.TabStop = false;
@@ -119,17 +122,19 @@
             this.panel2.Controls.Add(this.btnQLHH);
             this.panel2.Controls.Add(this.splitter1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 150);
+            this.panel2.Location = new System.Drawing.Point(0, 178);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(214, 437);
+            this.panel2.Size = new System.Drawing.Size(241, 519);
             this.panel2.TabIndex = 2;
             // 
             // btnHome
             // 
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnHome.Location = new System.Drawing.Point(0, 380);
+            this.btnHome.Location = new System.Drawing.Point(0, 451);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(209, 57);
+            this.btnHome.Size = new System.Drawing.Size(235, 68);
             this.btnHome.TabIndex = 6;
             this.btnHome.Text = "Trang Chủ";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -138,9 +143,10 @@
             // btnQLNV
             // 
             this.btnQLNV.Enabled = false;
-            this.btnQLNV.Location = new System.Drawing.Point(9, 260);
+            this.btnQLNV.Location = new System.Drawing.Point(10, 309);
+            this.btnQLNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQLNV.Name = "btnQLNV";
-            this.btnQLNV.Size = new System.Drawing.Size(191, 55);
+            this.btnQLNV.Size = new System.Drawing.Size(215, 65);
             this.btnQLNV.TabIndex = 5;
             this.btnQLNV.Text = "Nhân Viên";
             this.btnQLNV.UseVisualStyleBackColor = true;
@@ -148,9 +154,10 @@
             // 
             // btnQLKH
             // 
-            this.btnQLKH.Location = new System.Drawing.Point(9, 199);
+            this.btnQLKH.Location = new System.Drawing.Point(10, 236);
+            this.btnQLKH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQLKH.Name = "btnQLKH";
-            this.btnQLKH.Size = new System.Drawing.Size(191, 55);
+            this.btnQLKH.Size = new System.Drawing.Size(215, 65);
             this.btnQLKH.TabIndex = 4;
             this.btnQLKH.Text = "Khách Hàng";
             this.btnQLKH.UseVisualStyleBackColor = true;
@@ -158,9 +165,10 @@
             // 
             // btnQLHDB
             // 
-            this.btnQLHDB.Location = new System.Drawing.Point(9, 138);
+            this.btnQLHDB.Location = new System.Drawing.Point(10, 164);
+            this.btnQLHDB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQLHDB.Name = "btnQLHDB";
-            this.btnQLHDB.Size = new System.Drawing.Size(191, 55);
+            this.btnQLHDB.Size = new System.Drawing.Size(215, 65);
             this.btnQLHDB.TabIndex = 3;
             this.btnQLHDB.Text = "Hóa Đơn Bán";
             this.btnQLHDB.UseVisualStyleBackColor = true;
@@ -168,9 +176,10 @@
             // 
             // btnQLHDN
             // 
-            this.btnQLHDN.Location = new System.Drawing.Point(9, 77);
+            this.btnQLHDN.Location = new System.Drawing.Point(10, 91);
+            this.btnQLHDN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQLHDN.Name = "btnQLHDN";
-            this.btnQLHDN.Size = new System.Drawing.Size(191, 55);
+            this.btnQLHDN.Size = new System.Drawing.Size(215, 65);
             this.btnQLHDN.TabIndex = 2;
             this.btnQLHDN.Text = "Hóa Đơn Nhập";
             this.btnQLHDN.UseVisualStyleBackColor = true;
@@ -178,9 +187,10 @@
             // 
             // btnQLHH
             // 
-            this.btnQLHH.Location = new System.Drawing.Point(9, 15);
+            this.btnQLHH.Location = new System.Drawing.Point(10, 18);
+            this.btnQLHH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQLHH.Name = "btnQLHH";
-            this.btnQLHH.Size = new System.Drawing.Size(191, 55);
+            this.btnQLHH.Size = new System.Drawing.Size(215, 65);
             this.btnQLHH.TabIndex = 1;
             this.btnQLHH.Text = "Hàng Hóa";
             this.btnQLHH.UseVisualStyleBackColor = true;
@@ -190,9 +200,10 @@
             // 
             this.splitter1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.splitter1.Location = new System.Drawing.Point(209, 0);
+            this.splitter1.Location = new System.Drawing.Point(235, 0);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(5, 437);
+            this.splitter1.Size = new System.Drawing.Size(6, 519);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
@@ -210,10 +221,11 @@
             this.PageLoad_Panel.AutoSize = true;
             this.PageLoad_Panel.BackColor = System.Drawing.Color.LightCyan;
             this.PageLoad_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PageLoad_Panel.Location = new System.Drawing.Point(214, 150);
+            this.PageLoad_Panel.Location = new System.Drawing.Point(241, 178);
+            this.PageLoad_Panel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PageLoad_Panel.Name = "PageLoad_Panel";
-            this.PageLoad_Panel.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.PageLoad_Panel.Size = new System.Drawing.Size(862, 437);
+            this.PageLoad_Panel.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
+            this.PageLoad_Panel.Size = new System.Drawing.Size(969, 519);
             this.PageLoad_Panel.TabIndex = 3;
             // 
             // loading_panel
@@ -228,13 +240,15 @@
             // 
             // Khung
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1076, 587);
+            this.ClientSize = new System.Drawing.Size(1210, 697);
             this.Controls.Add(this.PageLoad_Panel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Khung";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

@@ -1,19 +1,23 @@
-﻿if OBJECT_ID('trg_CapNhatSoLuongHang', 'TR') IS NOT NULL
-    DROP TRIGGER trg_CapNhatSoLuongHang;
+﻿if OBJECT_ID('trg_CapNhatTongTien_HDN', 'TR') IS NOT NULL
+    DROP TRIGGER trg_CapNhatTongTien_HDN;
 go
-create trigger trg_CapNhatSoLuongHang
-on ChiTietHDN
-after insert, update, delete
-as
-begin
-    set nocount on;
+CREATE TRIGGER trg_CapNhatTongTien_HDN
+ON ChiTietHDN
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
     IF TRIGGER_NESTLEVEL() > 1
         RETURN;
-    update HangHoa
-    set SLTon = SLTon + isnull(i.SLNhap,0) - isnull(d.SLNhap,0)
-    from HangHoa h
-    left join inserted i on h.MaHH = i.MaHH
-    left join deleted d on h.MaHH = d.MaHH
-    where i.MaHH is not null or d.MaHH is not null;
-end;
-go
+    UPDATE HoaDonNhap
+    SET TongTien = (
+        SELECT SUM(SLNhap * Gia)
+        FROM ChiTietHDN c
+        WHERE c.MaHDN = HoaDonNhap.MaHDN
+    )
+    WHERE MaHDN IN (
+        SELECT MaHDN FROM inserted
+        UNION
+        SELECT MaHDN FROM deleted
+    );
+END;

@@ -11,6 +11,12 @@ DELETE FROM KhachHang;
 DELETE FROM TaiKhoan;
 DELETE FROM NhanVien;
 DELETE FROM HangHoa;
+drop trigger trg_CapNhatSoLuongHangBan;
+drop trigger trg_CapNhatSoLuongHangNhap;
+drop trigger trg_CapNhatTongTieuDung_KH;
+DROP TRIGGER trg_CapNhatGia;
+DROP TRIGGER trg_CapNhatTongTien_HDB;
+DROP TRIGGER trg_CapNhatTongTien_HDN;
 
 
 -- Bảng hàng hóa

@@ -33,7 +33,7 @@ namespace BTL1
             dtGioHang.Columns.Add("TenHH", typeof(string));
             dtGioHang.Columns.Add("Gia", typeof(decimal));
             dtGioHang.Columns.Add("SoLuong", typeof(int));
-            dtGioHang.Columns.Add("ThanhTien", typeof(decimal), "Gia * SoLuong"); // Cột tự tính toán
+            dtGioHang.Columns.Add("ThanhTien", typeof(decimal), "Gia * SoLuong");
 
             dgvGioHang.DataSource = dtGioHang;
         }
