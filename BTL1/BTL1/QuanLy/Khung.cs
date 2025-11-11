@@ -14,6 +14,7 @@ namespace BTL1.QuanLy
     public partial class Khung : Form
     {
         private User loggedInUser;
+
         public Form FormToLoad { get; set; }
         private Form currentChildForm;
 
@@ -25,7 +26,6 @@ namespace BTL1.QuanLy
             Userload();
         }
 
-        
         private void Khung_Load(object sender, EventArgs e)
         {
             if (FormToLoad != null)

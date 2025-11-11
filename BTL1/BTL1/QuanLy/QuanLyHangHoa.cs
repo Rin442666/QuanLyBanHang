@@ -92,7 +92,7 @@ namespace BTL1
             }
             action = "EDIT";
             SetInputEnabled(true);
-            txtMaHang.Enabled = false; // khóa mã hàng khi sửa
+            txtMaHang.Enabled = false;
             btnConfirm.Visible = true;
         }
 
@@ -112,7 +112,6 @@ namespace BTL1
             action = "SEARCH";
             SetInputEnabled(false);
             btnConfirm.Visible = false;
-
             string keyword = txtSearch.Text.Trim();
             da = new SqlDataAdapter("select MaHH as [Mã HH], TenHH as [Tên HH], SLTon as [Số lượng], Gia as [Giá], MoTa as [Mô tả], DonVi as [Đơn vị] from HangHoa WHERE MaHH LIKE @MaHH", conn);
             da.SelectCommand.Parameters.AddWithValue("@MaHH", "%" + keyword + "%");
@@ -134,7 +133,6 @@ namespace BTL1
             if (action == "ADD")
             {
                 if (!ValidateInput()) return;
-
                 SqlCommand cmd = new SqlCommand(
                     "INSERT INTO HangHoa (MaHH, TenHH, SLTon, Gia, MoTa, DonVi) VALUES (@MaHH, @TenHH, @SLTon, @Gia, @MoTa, @DonVi)", conn);
                 cmd.Parameters.AddWithValue("@MaHH", txtMaHang.Text);
@@ -143,7 +141,6 @@ namespace BTL1
                 cmd.Parameters.AddWithValue("@Gia", decimal.Parse(txtDonGia.Text));
                 cmd.Parameters.AddWithValue("@MoTa", txtMoTa.Text);
                 cmd.Parameters.AddWithValue("@DonVi", txtDonVi.Text);
-
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -152,16 +149,13 @@ namespace BTL1
             else if (action == "EDIT")
             {
                 if (!ValidateInput()) return;
-
-                SqlCommand cmd = new SqlCommand(
-                    "UPDATE HangHoa SET TenHH=@TenHH, SLTon=@SLTon, Gia=@Gia, MoTa=@MoTa, DonVi=@DonVi WHERE MaHH=@MaHH", conn);
+                SqlCommand cmd = new SqlCommand("UPDATE HangHoa SET TenHH=@TenHH, SLTon=@SLTon, Gia=@Gia, MoTa=@MoTa, DonVi=@DonVi WHERE MaHH=@MaHH", conn);
                 cmd.Parameters.AddWithValue("@MaHH", txtMaHang.Text);
                 cmd.Parameters.AddWithValue("@TenHH", txtTenHang.Text);
                 cmd.Parameters.AddWithValue("@SLTon", int.Parse(txtSoLuong.Text));
                 cmd.Parameters.AddWithValue("@Gia", decimal.Parse(txtDonGia.Text));
                 cmd.Parameters.AddWithValue("@MoTa", txtMoTa.Text);
                 cmd.Parameters.AddWithValue("@DonVi", txtDonVi.Text);
-
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -173,14 +167,12 @@ namespace BTL1
                 {
                     SqlCommand cmd = new SqlCommand("DELETE FROM HangHoa WHERE MaHH=@MaHH", conn);
                     cmd.Parameters.AddWithValue("@MaHH", txtMaHang.Text);
-
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Xóa hàng hóa thành công!");
                 }
             }
-
             LoadData();
             SetInputEnabled(false);
             btnConfirm.Visible = false;
@@ -198,18 +190,6 @@ namespace BTL1
                 txtDonVi.Text = row.Cells["Đơn vị"].Value.ToString();
                 txtMoTa.Text = row.Cells["Mô tả"].Value.ToString();
             }
-        }
-        
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Main mainForm = (Main)this.ParentForm;
-            mainForm.Home(true);
-            this.Close();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

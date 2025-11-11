@@ -25,7 +25,6 @@ namespace BTL1
             conn = new SqlConnection(connStr);
         }
 
-        
         private void QuanLyNhanVien_Load(object sender, EventArgs e)
         {
             LoadData();
@@ -203,6 +202,7 @@ namespace BTL1
             btnConfirm.Visible = false;
             action = "";
         }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             Main mainForm = (Main)this.ParentForm;

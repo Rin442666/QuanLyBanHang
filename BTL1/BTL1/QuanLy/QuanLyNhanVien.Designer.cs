@@ -45,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grbChucNang = new System.Windows.Forms.GroupBox();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -229,7 +228,6 @@
             // 
             // grbChucNang
             // 
-            this.grbChucNang.Controls.Add(this.btnBack);
             this.grbChucNang.Controls.Add(this.btnSearch);
             this.grbChucNang.Controls.Add(this.btnClear);
             this.grbChucNang.Controls.Add(this.btnEdit);
@@ -245,16 +243,6 @@
             this.grbChucNang.TabIndex = 1;
             this.grbChucNang.TabStop = false;
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(803, 24);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(85, 28);
-            this.btnBack.TabIndex = 7;
-            this.btnBack.Text = "Thoát";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(350, 23);
@@ -267,7 +255,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(673, 24);
+            this.btnClear.Location = new System.Drawing.Point(793, 24);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(85, 28);
@@ -278,7 +266,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(580, 24);
+            this.btnEdit.Location = new System.Drawing.Point(645, 24);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 28);
@@ -380,7 +368,6 @@
         private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.DateTimePicker dtNgaySinh;
         private System.Windows.Forms.Label label8;

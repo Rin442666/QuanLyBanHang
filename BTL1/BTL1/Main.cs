@@ -138,7 +138,6 @@ namespace BTL1
             NotLogged();
         }
 
-
         private void KhungCaller(Form childForm)
         {
             Khung khung = new Khung(loggedInUser);

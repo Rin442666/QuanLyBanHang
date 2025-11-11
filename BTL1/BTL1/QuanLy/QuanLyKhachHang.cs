@@ -76,12 +76,5 @@ namespace BTL1
                 txtTongTieuDung.Text = row.Cells["Tổng tiêu dùng"].Value.ToString();
             }
         }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Main mainForm = (Main)this.ParentForm;
-            mainForm.Home(true);
-            this.Close();
-        }
     }
 }

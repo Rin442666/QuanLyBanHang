@@ -26,10 +26,8 @@ namespace BTL1
 
         private void addHDN_Load(object sender, EventArgs e)
         {
-            // 1. Tải danh sách hàng hóa có sẵn
             LoadDanhSachHang();
 
-            // 2. Chuẩn bị "Giỏ hàng" (dgvGioHang)
             dtGioHang = new DataTable();
             dtGioHang.Columns.Add("MaHH", typeof(string));
             dtGioHang.Columns.Add("TenHH", typeof(string));
@@ -40,9 +38,6 @@ namespace BTL1
             dgvGioHang.DataSource = dtGioHang;
         }
 
-        /// <FORM_LOGIC>
-        /// Tải tất cả hàng hóa từ CSDL vào lưới bên trái
-        /// </summary>
         private void LoadDanhSachHang()
         {
             try
@@ -61,9 +56,6 @@ namespace BTL1
             }
         }
 
-        /// <summary>
-        /// Nút "Thêm ->" (Thêm hàng từ lưới trái sang lưới phải)
-        /// </summary>
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (dgvDanhSachHang.CurrentRow == null)
@@ -91,12 +83,10 @@ namespace BTL1
                 return;
             }
 
-            // Kiểm tra xem hàng đã có trong giỏ chưa
             DataRow existingRow = dtGioHang.AsEnumerable().FirstOrDefault(r => r.Field<string>("MaHH") == maHH);
 
             if (existingRow != null)
             {
-                // Nếu đã có, chỉ cập nhật số lượng
                 int slMoi = existingRow.Field<int>("SoLuong") + slMua;
                 if (slMoi > slTon)
                 {
@@ -107,7 +97,6 @@ namespace BTL1
             }
             else
             {
-                // Nếu chưa có, thêm dòng mới
                 dtGioHang.Rows.Add(maHH, tenHH, gia, slMua);
             }
 
@@ -122,16 +111,12 @@ namespace BTL1
                 return;
             }
 
-            // Xóa dòng khỏi DataTable
             int selectedIndex = dgvGioHang.CurrentRow.Index;
             dtGioHang.Rows[selectedIndex].Delete();
 
             CapNhatTongTien();
         }
 
-        /// <summary>
-        /// Tính tổng tiền từ dgvGioHang và cập nhật Label
-        /// </summary>
         private void CapNhatTongTien()
         {
             if (dtGioHang.Rows.Count > 0)
@@ -145,21 +130,14 @@ namespace BTL1
             }
         }
 
-        /// <summary>
-        /// Nút "Hủy bỏ"
-        /// </summary>
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
-        /// <summary>
-        /// Nút "Xác nhận & Lưu" (Logic chính)
-        /// </summary>
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            // 1. Kiểm tra thông tin
             if (string.IsNullOrWhiteSpace(txtMaNV.Text) || string.IsNullOrWhiteSpace(txtMaKH.Text))
             {
                 MessageBox.Show("Vui lòng nhập Mã nhân viên và Mã khách hàng.");
@@ -170,8 +148,6 @@ namespace BTL1
                 MessageBox.Show("Giỏ hàng đang trống. Vui lòng thêm sản phẩm.");
                 return;
             }
-
-            // 2. Bắt đầu Transaction (Quan trọng: Nếu 1 lệnh lỗi, tất cả sẽ bị hủy)
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
@@ -179,8 +155,6 @@ namespace BTL1
 
                 try
                 {
-                    // 3. LƯU HÓA ĐƠN (SHELL)
-                    // (Lưu ý: TongTien = NULL, vì Trigger trg_CapNhatTongT sẽ tự tính)
                     string queryHD = "INSERT INTO HoaDonBan (MaHDB, NgayBan, MaNV, MaKH, TongTien) VALUES (@MaHDB, @NgayBan, @MaNV, @MaKH, NULL)";
                     using (SqlCommand cmdHD = new SqlCommand(queryHD, conn, transaction))
                     {
@@ -191,20 +165,29 @@ namespace BTL1
                         cmdHD.ExecuteNonQuery();
                     }
 
-                    // 4. LƯU CHI TIẾT HÓA ĐƠN (LOOP)
                     string queryCT = "INSERT INTO ChiTietHDB (MaHDB, MaHH, SLBan) VALUES (@MaHDB, @MaHH, @SLBan)";
+                    string queryUpdateKho = "UPDATE HangHoa SET SLTon = SLTon - @SLBan WHERE MaHH = @MaHH";
+
                     foreach (DataRow row in dtGioHang.Rows)
                     {
+                        int slBan = Convert.ToInt32(row["SoLuong"]);
+                        string maHH = row["MaHH"].ToString();
+
                         using (SqlCommand cmdCT = new SqlCommand(queryCT, conn, transaction))
                         {
                             cmdCT.Parameters.AddWithValue("@MaHDB", this.maHDBMoi);
-                            cmdCT.Parameters.AddWithValue("@MaHH", row["MaHH"].ToString());
-                            cmdCT.Parameters.AddWithValue("@SLBan", Convert.ToInt32(row["SoLuong"]));
+                            cmdCT.Parameters.AddWithValue("@MaHH", maHH);
+                            cmdCT.Parameters.AddWithValue("@SLBan", slBan);
                             cmdCT.ExecuteNonQuery();
+                        }
+                        using (SqlCommand cmdKho = new SqlCommand(queryUpdateKho, conn, transaction))
+                        {
+                            cmdKho.Parameters.AddWithValue("@SLBan", slBan);
+                            cmdKho.Parameters.AddWithValue("@MaHH", maHH);
+                            cmdKho.ExecuteNonQuery();
                         }
                     }
 
-                    // 5. Nếu mọi thứ thành công, xác nhận transaction
                     transaction.Commit();
                     MessageBox.Show("Tạo hóa đơn " + this.maHDBMoi + " thành công!");
                     this.DialogResult = DialogResult.OK;
@@ -212,9 +195,8 @@ namespace BTL1
                 }
                 catch (SqlException ex)
                 {
-                    // 6. Nếu có lỗi, HỦY BỎ transaction
                     transaction.Rollback();
-                    if (ex.Number == 547) // Lỗi Foreign Key
+                    if (ex.Number == 547)
                     {
                         MessageBox.Show("Lỗi: Mã Nhân viên hoặc Mã Khách hàng không tồn tại. Vui lòng kiểm tra lại.", "Lỗi Khóa Ngoại");
                     }
