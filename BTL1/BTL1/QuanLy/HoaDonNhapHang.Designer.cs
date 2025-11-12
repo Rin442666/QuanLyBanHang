@@ -86,22 +86,28 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(346, 133);
+            this.btnLuu.Image = global::BTL1.Properties.Resources.confirm;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.Location = new System.Drawing.Point(365, 133);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(86, 27);
+            this.btnLuu.Size = new System.Drawing.Size(82, 27);
             this.btnLuu.TabIndex = 20;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(271, 98);
+            this.btnSearch.Image = global::BTL1.Properties.Resources.search;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.Location = new System.Drawing.Point(333, 99);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(84, 29);
+            this.btnSearch.Size = new System.Drawing.Size(114, 26);
             this.btnSearch.TabIndex = 19;
             this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -123,23 +129,29 @@
             // 
             // btnTaoHD
             // 
-            this.btnTaoHD.Location = new System.Drawing.Point(166, 134);
+            this.btnTaoHD.Image = global::BTL1.Properties.Resources.add;
+            this.btnTaoHD.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTaoHD.Location = new System.Drawing.Point(183, 133);
             this.btnTaoHD.Name = "btnTaoHD";
-            this.btnTaoHD.Size = new System.Drawing.Size(132, 27);
+            this.btnTaoHD.Size = new System.Drawing.Size(157, 27);
             this.btnTaoHD.TabIndex = 16;
             this.btnTaoHD.Text = "Tạo hóa đơn mới";
+            this.btnTaoHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTaoHD.UseVisualStyleBackColor = true;
             this.btnTaoHD.Click += new System.EventHandler(this.btnTaoHD_Click);
             // 
             // btnXemChiTiet
             // 
             this.btnXemChiTiet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnXemChiTiet.Location = new System.Drawing.Point(16, 134);
+            this.btnXemChiTiet.Image = global::BTL1.Properties.Resources.paper;
+            this.btnXemChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXemChiTiet.Location = new System.Drawing.Point(16, 133);
             this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXemChiTiet.Name = "btnXemChiTiet";
-            this.btnXemChiTiet.Size = new System.Drawing.Size(119, 27);
+            this.btnXemChiTiet.Size = new System.Drawing.Size(138, 27);
             this.btnXemChiTiet.TabIndex = 15;
             this.btnXemChiTiet.Text = "Xem chi tiết";
+            this.btnXemChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXemChiTiet.UseVisualStyleBackColor = true;
             this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 

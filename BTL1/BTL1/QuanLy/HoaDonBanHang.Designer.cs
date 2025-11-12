@@ -93,23 +93,29 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(319, 144);
+            this.btnLuu.Image = global::BTL1.Properties.Resources.confirm;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.Location = new System.Drawing.Point(347, 144);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(84, 27);
             this.btnLuu.TabIndex = 15;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXemChiTiet
             // 
+            this.btnXemChiTiet.Image = global::BTL1.Properties.Resources.paper;
+            this.btnXemChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXemChiTiet.Location = new System.Drawing.Point(16, 144);
             this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXemChiTiet.Name = "btnXemChiTiet";
-            this.btnXemChiTiet.Size = new System.Drawing.Size(111, 27);
+            this.btnXemChiTiet.Size = new System.Drawing.Size(127, 27);
             this.btnXemChiTiet.TabIndex = 14;
             this.btnXemChiTiet.Text = "Xem chi tiết";
+            this.btnXemChiTiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXemChiTiet.UseVisualStyleBackColor = true;
             this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
@@ -117,7 +123,7 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(112, 110);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(153, 27);
+            this.txtSearch.Size = new System.Drawing.Size(179, 27);
             this.txtSearch.TabIndex = 13;
             // 
             // lblSearch
@@ -131,22 +137,28 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(271, 109);
+            this.btnSearch.Image = global::BTL1.Properties.Resources.search;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.Location = new System.Drawing.Point(317, 109);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(84, 27);
+            this.btnSearch.Size = new System.Drawing.Size(114, 27);
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnTaoHD
             // 
-            this.btnTaoHD.Location = new System.Drawing.Point(157, 144);
+            this.btnTaoHD.Image = global::BTL1.Properties.Resources.add;
+            this.btnTaoHD.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTaoHD.Location = new System.Drawing.Point(165, 144);
             this.btnTaoHD.Name = "btnTaoHD";
-            this.btnTaoHD.Size = new System.Drawing.Size(132, 27);
+            this.btnTaoHD.Size = new System.Drawing.Size(156, 27);
             this.btnTaoHD.TabIndex = 10;
             this.btnTaoHD.Text = "Tạo hóa đơn mới";
+            this.btnTaoHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTaoHD.UseVisualStyleBackColor = true;
             this.btnTaoHD.Click += new System.EventHandler(this.btnTaoHD_Click);
             // 

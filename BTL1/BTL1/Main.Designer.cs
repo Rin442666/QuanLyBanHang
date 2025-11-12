@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTieuDeMain = new System.Windows.Forms.Label();
             this.gbxChucNang = new System.Windows.Forms.GroupBox();
             this.panel2 = new TransparentPanel();
             this.lblUserName = new System.Windows.Forms.Label();
@@ -41,18 +48,11 @@
             this.btnQLNV = new System.Windows.Forms.Button();
             this.btnQLKH = new System.Windows.Forms.Button();
             this.btnQLHH = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblTieuDeMain = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.gbxChucNang.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbxChucNang.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,6 +65,90 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(928, 588);
             this.panel1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lblTieuDeMain);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(928, 147);
+            this.panel3.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(434, 123);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(494, 22);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Căn cứ: Ngõ 120 Yên Lãng, Phường Thịnh Quang, TP Hà Nội";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(655, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(273, 22);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Email: Raumart36@cayxang.com";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(768, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 22);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "SĐT: 0361886424";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BTL1.Properties.Resources.istockphoto_1435513729_612x612_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(158, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(158, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(243, 68);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "RauMart";
+            // 
+            // lblTieuDeMain
+            // 
+            this.lblTieuDeMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblTieuDeMain.AutoSize = true;
+            this.lblTieuDeMain.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieuDeMain.Location = new System.Drawing.Point(318, 26);
+            this.lblTieuDeMain.Name = "lblTieuDeMain";
+            this.lblTieuDeMain.Size = new System.Drawing.Size(317, 55);
+            this.lblTieuDeMain.TabIndex = 1;
+            this.lblTieuDeMain.Text = "TRANG CHỦ";
+            this.lblTieuDeMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gbxChucNang
             // 
@@ -146,6 +230,8 @@
             this.btnQLHDN.AutoSize = true;
             this.btnQLHDN.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnQLHDN.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLHDN.Image = global::BTL1.Properties.Resources.cargo;
+            this.btnQLHDN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLHDN.Location = new System.Drawing.Point(541, 233);
             this.btnQLHDN.MaximumSize = new System.Drawing.Size(306, 48);
             this.btnQLHDN.MinimumSize = new System.Drawing.Size(306, 48);
@@ -153,6 +239,7 @@
             this.btnQLHDN.Size = new System.Drawing.Size(306, 48);
             this.btnQLHDN.TabIndex = 7;
             this.btnQLHDN.Text = "Quản lý hóa đơn nhập";
+            this.btnQLHDN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLHDN.UseVisualStyleBackColor = true;
             this.btnQLHDN.Click += new System.EventHandler(this.btnQLHDN_Click);
             // 
@@ -175,6 +262,8 @@
             this.btnQLHDB.AutoSize = true;
             this.btnQLHDB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnQLHDB.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLHDB.Image = global::BTL1.Properties.Resources.purchase_order;
+            this.btnQLHDB.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLHDB.Location = new System.Drawing.Point(541, 163);
             this.btnQLHDB.MaximumSize = new System.Drawing.Size(306, 48);
             this.btnQLHDB.MinimumSize = new System.Drawing.Size(306, 48);
@@ -182,6 +271,7 @@
             this.btnQLHDB.Size = new System.Drawing.Size(306, 48);
             this.btnQLHDB.TabIndex = 5;
             this.btnQLHDB.Text = "Quản lý hóa đơn bán hàng";
+            this.btnQLHDB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLHDB.UseVisualStyleBackColor = true;
             this.btnQLHDB.Click += new System.EventHandler(this.btnQLHDB_Click);
             // 
@@ -191,6 +281,8 @@
             this.btnQLNV.AutoSize = true;
             this.btnQLNV.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnQLNV.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLNV.Image = global::BTL1.Properties.Resources.cashier;
+            this.btnQLNV.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLNV.Location = new System.Drawing.Point(95, 314);
             this.btnQLNV.MaximumSize = new System.Drawing.Size(306, 48);
             this.btnQLNV.MinimumSize = new System.Drawing.Size(306, 48);
@@ -198,6 +290,7 @@
             this.btnQLNV.Size = new System.Drawing.Size(306, 48);
             this.btnQLNV.TabIndex = 2;
             this.btnQLNV.Text = "Quản lý nhân viên";
+            this.btnQLNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLNV.UseVisualStyleBackColor = true;
             this.btnQLNV.Click += new System.EventHandler(this.btnQLNV_Click);
             // 
@@ -207,6 +300,8 @@
             this.btnQLKH.AutoSize = true;
             this.btnQLKH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnQLKH.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLKH.Image = global::BTL1.Properties.Resources.buyer;
+            this.btnQLKH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLKH.Location = new System.Drawing.Point(95, 233);
             this.btnQLKH.MaximumSize = new System.Drawing.Size(306, 48);
             this.btnQLKH.MinimumSize = new System.Drawing.Size(306, 48);
@@ -214,6 +309,7 @@
             this.btnQLKH.Size = new System.Drawing.Size(306, 48);
             this.btnQLKH.TabIndex = 1;
             this.btnQLKH.Text = "Quản lý khách hàng";
+            this.btnQLKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLKH.UseVisualStyleBackColor = true;
             this.btnQLKH.Click += new System.EventHandler(this.btnQLKH_Click);
             // 
@@ -224,6 +320,8 @@
             this.btnQLHH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnQLHH.BackColor = System.Drawing.Color.Transparent;
             this.btnQLHH.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLHH.Image = global::BTL1.Properties.Resources.store;
+            this.btnQLHH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLHH.Location = new System.Drawing.Point(95, 163);
             this.btnQLHH.MaximumSize = new System.Drawing.Size(306, 48);
             this.btnQLHH.MinimumSize = new System.Drawing.Size(306, 48);
@@ -231,92 +329,9 @@
             this.btnQLHH.Size = new System.Drawing.Size(306, 48);
             this.btnQLHH.TabIndex = 0;
             this.btnQLHH.Text = "Quản lý hàng hóa";
-            this.btnQLHH.UseVisualStyleBackColor = false;
+            this.btnQLHH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnQLHH.UseVisualStyleBackColor = true;
             this.btnQLHH.Click += new System.EventHandler(this.btnQLHH_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.lblTieuDeMain);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(928, 147);
-            this.panel3.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(434, 123);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(494, 22);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Căn cứ: Ngõ 120 Yên Lãng, Phường Thịnh Quang, TP Hà Nội";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(655, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(273, 22);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Email: Raumart36@cayxang.com";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(768, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 22);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "SĐT: 0361886424";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BTL1.Properties.Resources.istockphoto_1435513729_612x612_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(158, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 68);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "RauMart";
-            // 
-            // lblTieuDeMain
-            // 
-            this.lblTieuDeMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblTieuDeMain.AutoSize = true;
-            this.lblTieuDeMain.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDeMain.Location = new System.Drawing.Point(318, 26);
-            this.lblTieuDeMain.Name = "lblTieuDeMain";
-            this.lblTieuDeMain.Size = new System.Drawing.Size(310, 53);
-            this.lblTieuDeMain.TabIndex = 1;
-            this.lblTieuDeMain.Text = "TRANG CHỦ";
-            this.lblTieuDeMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Main
             // 
@@ -331,13 +346,13 @@
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbxChucNang.ResumeLayout(false);
             this.gbxChucNang.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

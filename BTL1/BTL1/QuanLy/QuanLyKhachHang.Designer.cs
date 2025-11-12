@@ -80,11 +80,14 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(499, 32);
+            this.btnSearch.Image = global::BTL1.Properties.Resources.search;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.Location = new System.Drawing.Point(486, 32);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(91, 30);
+            this.btnSearch.Size = new System.Drawing.Size(114, 30);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 

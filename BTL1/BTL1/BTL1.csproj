@@ -276,6 +276,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\1280x1024-2407b512f6f2eec61cd2f3136242a025.gif" />
+    <None Include="Resources\paper.png" />
+    <None Include="Resources\store.png" />
+    <None Include="Resources\purchase-order.png" />
+    <None Include="Resources\shop.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\order.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\add-to-basket.png" />
+    <None Include="Resources\buyer.png" />
+    <None Include="Resources\cashier.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\editor.png" />
+    <None Include="Resources\basket.png" />
+    <None Include="Resources\cargo.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\confirm.png" />
+    <Content Include="Resources\home.png" />
     <Content Include="Resources\logo.png" />
     <None Include="Database\QLBH.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

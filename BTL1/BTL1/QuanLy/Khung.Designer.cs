@@ -93,7 +93,7 @@
             this.lblTitle.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(521, 11);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(128, 38);
+            this.lblTitle.Size = new System.Drawing.Size(123, 37);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "jpdiada";
             // 
@@ -131,68 +131,86 @@
             // btnHome
             // 
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnHome.Image = global::BTL1.Properties.Resources.home;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHome.Location = new System.Drawing.Point(0, 451);
             this.btnHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(235, 68);
             this.btnHome.TabIndex = 6;
             this.btnHome.Text = "Trang Chủ";
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnQLNV
             // 
             this.btnQLNV.Enabled = false;
+            this.btnQLNV.Image = global::BTL1.Properties.Resources.cashier;
+            this.btnQLNV.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLNV.Location = new System.Drawing.Point(10, 309);
             this.btnQLNV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQLNV.Name = "btnQLNV";
             this.btnQLNV.Size = new System.Drawing.Size(215, 65);
             this.btnQLNV.TabIndex = 5;
             this.btnQLNV.Text = "Nhân Viên";
+            this.btnQLNV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLNV.UseVisualStyleBackColor = true;
             this.btnQLNV.Click += new System.EventHandler(this.btnQLNV_Click);
             // 
             // btnQLKH
             // 
+            this.btnQLKH.Image = global::BTL1.Properties.Resources.buyer;
+            this.btnQLKH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLKH.Location = new System.Drawing.Point(10, 236);
             this.btnQLKH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQLKH.Name = "btnQLKH";
             this.btnQLKH.Size = new System.Drawing.Size(215, 65);
             this.btnQLKH.TabIndex = 4;
             this.btnQLKH.Text = "Khách Hàng";
+            this.btnQLKH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLKH.UseVisualStyleBackColor = true;
             this.btnQLKH.Click += new System.EventHandler(this.btnQLKH_Click);
             // 
             // btnQLHDB
             // 
+            this.btnQLHDB.Image = global::BTL1.Properties.Resources.cargo;
+            this.btnQLHDB.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLHDB.Location = new System.Drawing.Point(10, 164);
             this.btnQLHDB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQLHDB.Name = "btnQLHDB";
             this.btnQLHDB.Size = new System.Drawing.Size(215, 65);
             this.btnQLHDB.TabIndex = 3;
             this.btnQLHDB.Text = "Hóa Đơn Bán";
+            this.btnQLHDB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLHDB.UseVisualStyleBackColor = true;
             this.btnQLHDB.Click += new System.EventHandler(this.btnQLHDB_Click);
             // 
             // btnQLHDN
             // 
+            this.btnQLHDN.Image = global::BTL1.Properties.Resources.purchase_order;
+            this.btnQLHDN.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLHDN.Location = new System.Drawing.Point(10, 91);
             this.btnQLHDN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQLHDN.Name = "btnQLHDN";
             this.btnQLHDN.Size = new System.Drawing.Size(215, 65);
             this.btnQLHDN.TabIndex = 2;
             this.btnQLHDN.Text = "Hóa Đơn Nhập";
+            this.btnQLHDN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLHDN.UseVisualStyleBackColor = true;
             this.btnQLHDN.Click += new System.EventHandler(this.btnQLHDN_Click);
             // 
             // btnQLHH
             // 
+            this.btnQLHH.Image = global::BTL1.Properties.Resources.store;
+            this.btnQLHH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQLHH.Location = new System.Drawing.Point(10, 18);
             this.btnQLHH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnQLHH.Name = "btnQLHH";
             this.btnQLHH.Size = new System.Drawing.Size(215, 65);
             this.btnQLHH.TabIndex = 1;
             this.btnQLHH.Text = "Hàng Hóa";
+            this.btnQLHH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLHH.UseVisualStyleBackColor = true;
             this.btnQLHH.Click += new System.EventHandler(this.btnQLHH_Click);
             // 

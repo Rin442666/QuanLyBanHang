@@ -90,12 +90,15 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(519, 179);
+            this.btnLuu.Image = global::BTL1.Properties.Resources.confirm;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.Location = new System.Drawing.Point(534, 181);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(130, 32);
             this.btnLuu.TabIndex = 15;
             this.btnLuu.Text = "Xác nhận";
+            this.btnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
@@ -118,12 +121,15 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.Image = global::BTL1.Properties.Resources.search;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.Location = new System.Drawing.Point(293, 125);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(94, 32);
+            this.btnSearch.Size = new System.Drawing.Size(125, 32);
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // grbHoaDonBan
@@ -131,11 +137,11 @@
             this.grbHoaDonBan.AutoSize = true;
             this.grbHoaDonBan.Controls.Add(this.dgvDanhSachHang);
             this.grbHoaDonBan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grbHoaDonBan.Location = new System.Drawing.Point(0, 241);
+            this.grbHoaDonBan.Location = new System.Drawing.Point(0, 243);
             this.grbHoaDonBan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grbHoaDonBan.Name = "grbHoaDonBan";
             this.grbHoaDonBan.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grbHoaDonBan.Size = new System.Drawing.Size(670, 577);
+            this.grbHoaDonBan.Size = new System.Drawing.Size(670, 575);
             this.grbHoaDonBan.TabIndex = 5;
             this.grbHoaDonBan.TabStop = false;
             this.grbHoaDonBan.Text = "Danh Sách Hàng Hóa";
@@ -152,7 +158,7 @@
             this.dgvDanhSachHang.Name = "dgvDanhSachHang";
             this.dgvDanhSachHang.RowHeadersWidth = 51;
             this.dgvDanhSachHang.RowTemplate.Height = 24;
-            this.dgvDanhSachHang.Size = new System.Drawing.Size(664, 549);
+            this.dgvDanhSachHang.Size = new System.Drawing.Size(664, 547);
             this.dgvDanhSachHang.TabIndex = 0;
             // 
             // txtMaKH
@@ -275,30 +281,36 @@
             this.grbThongtin.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.grbThongtin.Name = "grbThongtin";
             this.grbThongtin.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.grbThongtin.Size = new System.Drawing.Size(670, 241);
+            this.grbThongtin.Size = new System.Drawing.Size(670, 243);
             this.grbThongtin.TabIndex = 3;
             this.grbThongtin.TabStop = false;
             this.grbThongtin.Text = "Thông tin chung";
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(402, 179);
+            this.btnXoa.Image = global::BTL1.Properties.Resources.delete;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoa.Location = new System.Drawing.Point(419, 181);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(94, 32);
             this.btnXoa.TabIndex = 20;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(276, 179);
+            this.btnThem.Image = global::BTL1.Properties.Resources.add;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem.Location = new System.Drawing.Point(293, 181);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(94, 32);
             this.btnThem.TabIndex = 19;
             this.btnThem.Text = "Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -313,12 +325,15 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(519, 123);
+            this.btnHuy.Image = global::BTL1.Properties.Resources.cancel;
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuy.Location = new System.Drawing.Point(534, 125);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(130, 32);
             this.btnHuy.TabIndex = 17;
             this.btnHuy.Text = "Hủy bỏ";
+            this.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
