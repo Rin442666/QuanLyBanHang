@@ -57,6 +57,7 @@
             this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnTong.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.HoaDon.SuspendLayout();
@@ -224,6 +225,7 @@
             // 
             // tabHangMoi
             // 
+            this.tabHangMoi.Controls.Add(this.label6);
             this.tabHangMoi.Controls.Add(this.lblgia);
             this.tabHangMoi.Controls.Add(this.txtGia_Moi);
             this.tabHangMoi.Controls.Add(this.txtDonVi_Moi);
@@ -243,7 +245,7 @@
             // lblgia
             // 
             this.lblgia.AutoSize = true;
-            this.lblgia.Location = new System.Drawing.Point(10, 154);
+            this.lblgia.Location = new System.Drawing.Point(28, 238);
             this.lblgia.Name = "lblgia";
             this.lblgia.Size = new System.Drawing.Size(77, 19);
             this.lblgia.TabIndex = 12;
@@ -251,24 +253,24 @@
             // 
             // txtGia_Moi
             // 
-            this.txtGia_Moi.Location = new System.Drawing.Point(122, 146);
+            this.txtGia_Moi.Location = new System.Drawing.Point(143, 230);
             this.txtGia_Moi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtGia_Moi.Name = "txtGia_Moi";
-            this.txtGia_Moi.Size = new System.Drawing.Size(145, 27);
+            this.txtGia_Moi.Size = new System.Drawing.Size(168, 27);
             this.txtGia_Moi.TabIndex = 11;
             // 
             // txtDonVi_Moi
             // 
-            this.txtDonVi_Moi.Location = new System.Drawing.Point(122, 99);
+            this.txtDonVi_Moi.Location = new System.Drawing.Point(143, 168);
             this.txtDonVi_Moi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtDonVi_Moi.Name = "txtDonVi_Moi";
-            this.txtDonVi_Moi.Size = new System.Drawing.Size(145, 27);
+            this.txtDonVi_Moi.Size = new System.Drawing.Size(121, 27);
             this.txtDonVi_Moi.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 107);
+            this.label5.Location = new System.Drawing.Point(28, 176);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 19);
             this.label5.TabIndex = 8;
@@ -276,24 +278,24 @@
             // 
             // txtTenHH_Moi
             // 
-            this.txtTenHH_Moi.Location = new System.Drawing.Point(122, 56);
+            this.txtTenHH_Moi.Location = new System.Drawing.Point(143, 108);
             this.txtTenHH_Moi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtTenHH_Moi.Name = "txtTenHH_Moi";
-            this.txtTenHH_Moi.Size = new System.Drawing.Size(145, 27);
+            this.txtTenHH_Moi.Size = new System.Drawing.Size(310, 27);
             this.txtTenHH_Moi.TabIndex = 7;
             // 
             // txtMaHH_Moi
             // 
-            this.txtMaHH_Moi.Location = new System.Drawing.Point(122, 17);
+            this.txtMaHH_Moi.Location = new System.Drawing.Point(143, 49);
             this.txtMaHH_Moi.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtMaHH_Moi.Name = "txtMaHH_Moi";
-            this.txtMaHH_Moi.Size = new System.Drawing.Size(145, 27);
+            this.txtMaHH_Moi.Size = new System.Drawing.Size(121, 27);
             this.txtMaHH_Moi.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 64);
+            this.label1.Location = new System.Drawing.Point(28, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 19);
             this.label1.TabIndex = 3;
@@ -302,7 +304,7 @@
             // lblhhm
             // 
             this.lblhhm.AutoSize = true;
-            this.lblhhm.Location = new System.Drawing.Point(10, 25);
+            this.lblhhm.Location = new System.Drawing.Point(31, 57);
             this.lblhhm.Name = "lblhhm";
             this.lblhhm.Size = new System.Drawing.Size(106, 19);
             this.lblhhm.TabIndex = 2;
@@ -408,6 +410,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nhân viên nhập:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(317, 235);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 22);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "(VND)";
+            // 
             // addHDN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -469,5 +481,6 @@
         private System.Windows.Forms.TextBox txtDonVi_Moi;
         private System.Windows.Forms.TextBox txtGia_Moi;
         private System.Windows.Forms.Label lblgia;
+        private System.Windows.Forms.Label label6;
     }
 }
