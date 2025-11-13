@@ -159,21 +159,13 @@ namespace BTL1
 
         private void btnTaoHD_Click(object sender, EventArgs e)
         {
-            txtMaHDN.Text = GetNewMaHD();
-            txtMaNV.Enabled = true;
-            txtMaNV.Text = "";
-            txtTongTien.Text = "0";
-            dtpNhap.Value = DateTime.Now;
-            btnLuu.Visible = true;
-            if (dgvChiTietHDN.DataSource is DataTable dtChiTiet)
+            string maHDNMoi = GetNewMaHD();
+            addHDB dialogChonHang = new addHDN(maHDNMoi, connStr);
+            DialogResult result = dialogChonHang.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                dtChiTiet.Clear();
+                LoadData();
             }
-            else
-            {
-                dgvChiTietHDN.DataSource = null;
-            }
-            txtMaNV.Focus();
         }
 
         private bool ValidateInput()

@@ -8,226 +8,317 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration; // Đừng quên thêm Reference này
 
 namespace BTL1
 {
+    // Đổi tên class "addHDN" cho đúng chuẩn C#
     public partial class addHDN : Form
     {
         string connStr;
-        string maHDBMoi;
-        DataTable dtGioHang;
+        string maHDNMoi;
+        DataTable dtGioHang; // Data cho dgvHoaDon (Giỏ hàng - BÊN PHẢI)
+        DataTable dtHangCu;  // Data cho dgvHangCu (Hàng có sẵn - BÊN TRÁI)
 
-        public addHDN(string maHDB, string connectionString)
+        public addHDN(string maHDN, string connectionString)
         {
             InitializeComponent();
+            this.maHDNMoi = maHDN;
             this.connStr = connectionString;
-            this.maHDBMoi = maHDB;
         }
 
         private void addHDN_Load(object sender, EventArgs e)
         {
-            // 1. Tải danh sách hàng hóa có sẵn
-            LoadDanhSachHang();
+            this.Text = "Tạo Hóa Đơn Nhập: " + maHDNMoi;
 
-            // 2. Chuẩn bị "Giỏ hàng" (dgvGioHang)
-            dtGioHang = new DataTable();
-            dtGioHang.Columns.Add("MaHH", typeof(string));
-            dtGioHang.Columns.Add("TenHH", typeof(string));
-            dtGioHang.Columns.Add("Gia", typeof(decimal));
-            dtGioHang.Columns.Add("SoLuong", typeof(int));
-            dtGioHang.Columns.Add("ThanhTien", typeof(decimal), "Gia * SoLuong"); // Cột tự tính toán
-
-            dgvGioHang.DataSource = dtGioHang;
+            SetupGioHang();
+            LoadHangCu();
         }
-
-        /// <FORM_LOGIC>
-        /// Tải tất cả hàng hóa từ CSDL vào lưới bên trái
-        /// </summary>
-        private void LoadDanhSachHang()
+        private void LoadHangCu()
         {
             try
             {
+                string query = "SELECT MaHH, TenHH, DonVi, Gia FROM HangHoa";
                 using (SqlConnection conn = new SqlConnection(connStr))
-                using (SqlDataAdapter da = new SqlDataAdapter("SELECT MaHH, TenHH, Gia, SLTon FROM HangHoa WHERE SLTon > 0", conn))
+                using (SqlDataAdapter da = new SqlDataAdapter(query, conn))
                 {
-                    DataTable dtHang = new DataTable();
-                    da.Fill(dtHang);
-                    dgvDanhSachHang.DataSource = dtHang;
+                    dtHangCu = new DataTable();
+                    da.Fill(dtHangCu);
+                    dgvHangCu.DataSource = dtHangCu;
+                    if (dgvHangCu.Columns["Gia"] != null)
+                        dgvHangCu.Columns["Gia"].Visible = false;
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi tải danh sách hàng hóa: " + ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show("Lỗi tải danh sách hàng cũ: " + ex.Message); }
         }
 
         /// <summary>
-        /// Nút "Thêm ->" (Thêm hàng từ lưới trái sang lưới phải)
+        /// Cấu hình DataTable cho "Giỏ hàng" (dgvHoaDon - Lưới bên phải)
+        /// </summary>
+        private void SetupGioHang()
+        {
+            dtGioHang = new DataTable();
+            dtGioHang.Columns.Add("MaHH", typeof(string));
+            dtGioHang.Columns.Add("TenHH", typeof(string));
+            dtGioHang.Columns.Add("SoLuong", typeof(int));
+            dtGioHang.Columns.Add("Gia", typeof(decimal)); // Giá này là Giá Nhập
+            dtGioHang.Columns.Add("ThanhTien", typeof(decimal), "SoLuong * Gia"); // Cột tự tính
+
+            dgvHoaDon.DataSource = dtGioHang;
+        }
+
+        // ==========================================
+        // CÁC NÚT CHỨC NĂNG (BÊN TRÁI - TOP)
+        // ==========================================
+
+        /// <summary>
+        /// Nút "Thêm": Thêm hàng từ Tab đang chọn vào Giỏ hàng (lưới phải)
         /// </summary>
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (dgvDanhSachHang.CurrentRow == null)
-            {
-                MessageBox.Show("Vui lòng chọn một mặt hàng từ danh sách bên trái.");
-                return;
-            }
-
-            DataGridViewRow selectedRow = dgvDanhSachHang.CurrentRow;
-            string maHH = selectedRow.Cells["MaHH"].Value.ToString();
-            string tenHH = selectedRow.Cells["TenHH"].Value.ToString();
-            decimal gia = Convert.ToDecimal(selectedRow.Cells["Gia"].Value);
-            int slTon = Convert.ToInt32(selectedRow.Cells["SLTon"].Value);
-            int slMua = (int)nudSoLuong.Value;
-
-            if (slMua <= 0)
+            // Lấy số lượng chung
+            int soLuong = (int)nudSoLuong.Value;
+            if (soLuong <= 0)
             {
                 MessageBox.Show("Số lượng phải lớn hơn 0.");
                 return;
             }
 
-            if (slMua > slTon)
+            // Xử lý tùy theo Tab đang được chọn
+            if (tabControl1.SelectedTab == tabHangCu)
             {
-                MessageBox.Show($"Số lượng tồn kho không đủ (Chỉ còn {slTon}).");
-                return;
+                // 1. Lấy hàng từ Tab HÀNG CŨ
+                if (dgvHangCu.CurrentRow == null) return;
+
+                DataGridViewRow row = dgvHangCu.CurrentRow;
+                string maHH = row.Cells["MaHH"].Value.ToString();
+                string tenHH = row.Cells["TenHH"].Value.ToString();
+                decimal gia = Convert.ToDecimal(row.Cells["Gia"].Value); // Lấy giá ẩn
+
+                ThemDongVaoGioHang(maHH, tenHH, soLuong, gia);
             }
-
-            // Kiểm tra xem hàng đã có trong giỏ chưa
-            DataRow existingRow = dtGioHang.AsEnumerable().FirstOrDefault(r => r.Field<string>("MaHH") == maHH);
-
-            if (existingRow != null)
+            else if (tabControl1.SelectedTab == tabHangMoi)
             {
-                // Nếu đã có, chỉ cập nhật số lượng
-                int slMoi = existingRow.Field<int>("SoLuong") + slMua;
-                if (slMoi > slTon)
+                // 2. Lấy hàng từ Tab HÀNG MỚI
+                string maHH = txtMaHH_Moi.Text.Trim();
+                string tenHH = txtTenHH_Moi.Text.Trim();
+                string donVi = txtDonVi_Moi.Text.Trim();
+
+                decimal gia = 0;
+                if (!decimal.TryParse(txtGia_Moi.Text, out gia) || gia <= 0)
                 {
-                    MessageBox.Show($"Tổng số lượng vượt quá tồn kho (Đã có {existingRow.Field<int>("SoLuong")} trong giỏ, chỉ còn {slTon}).");
+                    MessageBox.Show("Vui lòng nhập giá hợp lệ.");
                     return;
                 }
-                existingRow["SoLuong"] = slMoi;
-            }
-            else
-            {
-                // Nếu chưa có, thêm dòng mới
-                dtGioHang.Rows.Add(maHH, tenHH, gia, slMua);
-            }
+                if (string.IsNullOrWhiteSpace(maHH) || string.IsNullOrWhiteSpace(tenHH))
+                {
+                    MessageBox.Show("Vui lòng nhập đủ Mã và Tên hàng mới.");
+                    return;
+                }
 
-            CapNhatTongTien();
+                // BƯỚC QUAN TRỌNG: Phải tạo hàng mới này trong CSDL TRƯỚC
+                if (!TaoHangHoaMoi(maHH, tenHH, donVi, gia))
+                {
+                    // Nếu tạo thất bại (ví dụ trùng Mã), dừng lại
+                    return;
+                }
+
+                // Nếu tạo thành công, thêm vào giỏ hàng
+                ThemDongVaoGioHang(maHH, tenHH, soLuong, gia);
+
+                // Làm mới Tab 1 (để hàng mới xuất hiện) và xóa Tab 2
+                LoadHangCu();
+                txtMaHH_Moi.Clear(); txtTenHH_Moi.Clear();
+                txtDonVi_Moi.Clear(); txtGia_Moi.Clear();
+            }
         }
 
+        /// <summary>
+        /// Nút "Xóa": Xóa hàng đang chọn khỏi Giỏ hàng (lưới phải)
+        /// </summary>
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (dgvGioHang.CurrentRow == null)
+            if (dgvHoaDon.CurrentRow == null)
             {
-                MessageBox.Show("Vui lòng chọn một mặt hàng từ giỏ hàng bên phải.");
+                MessageBox.Show("Vui lòng chọn một hàng trong Hóa Đơn (bên phải) để xóa.");
                 return;
             }
 
             // Xóa dòng khỏi DataTable
-            int selectedIndex = dgvGioHang.CurrentRow.Index;
+            int selectedIndex = dgvHoaDon.CurrentRow.Index;
             dtGioHang.Rows[selectedIndex].Delete();
 
             CapNhatTongTien();
         }
 
         /// <summary>
-        /// Tính tổng tiền từ dgvGioHang và cập nhật Label
-        /// </summary>
-        private void CapNhatTongTien()
-        {
-            if (dtGioHang.Rows.Count > 0)
-            {
-                decimal tongTien = Convert.ToDecimal(dtGioHang.Compute("SUM(ThanhTien)", string.Empty));
-                lblTongTien.Text = "Tổng tiền: " + tongTien.ToString("N0") + " VND";
-            }
-            else
-            {
-                lblTongTien.Text = "Tổng tiền: 0 VND";
-            }
-        }
-
-        /// <summary>
-        /// Nút "Hủy bỏ"
+        /// Nút "Hủy Hóa Đơn": Thoát Form
         /// </summary>
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
+            if (MessageBox.Show("Bạn có chắc muốn hủy hóa đơn này?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.Cancel;
+                this.Close();
+            }
         }
 
         /// <summary>
-        /// Nút "Xác nhận & Lưu" (Logic chính)
+        /// Nút "Xác Nhận": Lưu Hóa đơn và Chi tiết vào CSDL
         /// </summary>
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            // 1. Kiểm tra thông tin
-            if (string.IsNullOrWhiteSpace(txtMaNV.Text) || string.IsNullOrWhiteSpace(txtMaKH.Text))
-            {
-                MessageBox.Show("Vui lòng nhập Mã nhân viên và Mã khách hàng.");
-                return;
-            }
             if (dtGioHang.Rows.Count == 0)
             {
-                MessageBox.Show("Giỏ hàng đang trống. Vui lòng thêm sản phẩm.");
+                MessageBox.Show("Giỏ hàng đang trống. Không thể lưu.");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtMaNV.Text))
+            {
+                MessageBox.Show("Vui lòng nhập Mã Nhân Viên.");
+                txtMaNV.Focus();
                 return;
             }
 
-            // 2. Bắt đầu Transaction (Quan trọng: Nếu 1 lệnh lỗi, tất cả sẽ bị hủy)
+            // Bắt đầu Transaction (Đảm bảo an toàn dữ liệu)
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 conn.Open();
-                SqlTransaction transaction = conn.BeginTransaction();
+                SqlTransaction trans = conn.BeginTransaction();
 
                 try
                 {
-                    // 3. LƯU HÓA ĐƠN (SHELL)
-                    // (Lưu ý: TongTien = NULL, vì Trigger trg_CapNhatTongT sẽ tự tính)
-                    string queryHD = "INSERT INTO HoaDonBan (MaHDB, NgayBan, MaNV, MaKH, TongTien) VALUES (@MaHDB, @NgayBan, @MaNV, @MaKH, NULL)";
-                    using (SqlCommand cmdHD = new SqlCommand(queryHD, conn, transaction))
+                    // 1. Tạo Hóa Đơn Nhập (Header)
+                    // Trigger của bạn sẽ tự tính TongTien sau
+                    string qHD = "INSERT INTO HoaDonNhap (MaHDN, NgayNhap, MaNV, TongTien) VALUES (@Ma, @Ngay, @NV, NULL)";
+                    using (SqlCommand cmdHD = new SqlCommand(qHD, conn, trans))
                     {
-                        cmdHD.Parameters.AddWithValue("@MaHDB", this.maHDBMoi);
-                        cmdHD.Parameters.AddWithValue("@NgayBan", DateTime.Now);
-                        cmdHD.Parameters.AddWithValue("@MaNV", txtMaNV.Text.Trim());
-                        cmdHD.Parameters.AddWithValue("@MaKH", txtMaKH.Text.Trim());
+                        cmdHD.Parameters.AddWithValue("@Ma", maHDNMoi);
+                        cmdHD.Parameters.AddWithValue("@Ngay", dtpNgayNhap.Value);
+                        cmdHD.Parameters.AddWithValue("@NV", txtMaNV.Text.Trim());
                         cmdHD.ExecuteNonQuery();
                     }
 
-                    // 4. LƯU CHI TIẾT HÓA ĐƠN (LOOP)
-                    string queryCT = "INSERT INTO ChiTietHDB (MaHDB, MaHH, SLBan) VALUES (@MaHDB, @MaHH, @SLBan)";
+                    // 2. Lưu chi tiết (Loop) VÀ Cập nhật kho
+                    string qCT = "INSERT INTO ChiTietHDN (MaHDN, MaHH, SLNhap, Gia) VALUES (@MaHD, @MaHH, @SL, @Gia)";
+                    string qKho = "UPDATE HangHoa SET SLTon = SLTon + @SL WHERE MaHH = @MaHH"; // CỘNG kho
+
                     foreach (DataRow row in dtGioHang.Rows)
                     {
-                        using (SqlCommand cmdCT = new SqlCommand(queryCT, conn, transaction))
+                        // Lệnh 1: Insert vào ChiTietHDN
+                        using (SqlCommand cmdCT = new SqlCommand(qCT, conn, trans))
                         {
-                            cmdCT.Parameters.AddWithValue("@MaHDB", this.maHDBMoi);
-                            cmdCT.Parameters.AddWithValue("@MaHH", row["MaHH"].ToString());
-                            cmdCT.Parameters.AddWithValue("@SLBan", Convert.ToInt32(row["SoLuong"]));
+                            cmdCT.Parameters.AddWithValue("@MaHD", maHDNMoi);
+                            cmdCT.Parameters.AddWithValue("@MaHH", row["MaHH"]);
+                            cmdCT.Parameters.AddWithValue("@SL", row["SoLuong"]);
+                            cmdCT.Parameters.AddWithValue("@Gia", row["Gia"]); // Dùng giá nhập từ giỏ hàng
                             cmdCT.ExecuteNonQuery();
+                        }
+
+                        // Lệnh 2: Cập nhật (CỘNG) số lượng tồn kho
+                        using (SqlCommand cmdKho = new SqlCommand(qKho, conn, trans))
+                        {
+                            cmdKho.Parameters.AddWithValue("@SL", row["SoLuong"]);
+                            cmdKho.Parameters.AddWithValue("@MaHH", row["MaHH"]);
+                            cmdKho.ExecuteNonQuery();
                         }
                     }
 
-                    // 5. Nếu mọi thứ thành công, xác nhận transaction
-                    transaction.Commit();
-                    MessageBox.Show("Tạo hóa đơn " + this.maHDBMoi + " thành công!");
+                    // Nếu mọi thứ OK, xác nhận
+                    trans.Commit();
+                    MessageBox.Show("Tạo hóa đơn nhập " + maHDNMoi + " thành công!");
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
                 catch (SqlException ex)
                 {
-                    // 6. Nếu có lỗi, HỦY BỎ transaction
-                    transaction.Rollback();
-                    if (ex.Number == 547) // Lỗi Foreign Key
-                    {
-                        MessageBox.Show("Lỗi: Mã Nhân viên hoặc Mã Khách hàng không tồn tại. Vui lòng kiểm tra lại.", "Lỗi Khóa Ngoại");
-                    }
+                    trans.Rollback(); // Hủy bỏ mọi thay đổi nếu có lỗi
+                    if (ex.Number == 547) // Lỗi khóa ngoại
+                        MessageBox.Show("Lỗi: Mã Nhân Viên không tồn tại. Vui lòng kiểm tra lại.");
                     else
-                    {
-                        MessageBox.Show("Lỗi CSDL khi lưu hóa đơn: " + ex.Message, "Lỗi");
-                    }
+                        MessageBox.Show("Lỗi CSDL: " + ex.Message);
                 }
                 catch (Exception ex)
                 {
-                    transaction.Rollback();
-                    MessageBox.Show("Lỗi hệ thống: " + ex.Message, "Lỗi");
+                    trans.Rollback();
+                    MessageBox.Show("Lỗi hệ thống: " + ex.Message);
                 }
+            } // 'using' tự động đóng kết nối
+        }
+
+        // ==========================================
+        // CÁC HÀM HỖ TRỢ (PRIVATE)
+        // ==========================================
+
+        /// <summary>
+        /// Logic thêm hàng mới vào CSDL (Bảng HangHoa)
+        /// </summary>
+        private bool TaoHangHoaMoi(string ma, string ten, string donvi, decimal gia)
+        {
+            // (Giá nhập = Giá bán, SLTon ban đầu = 0)
+            string query = "INSERT INTO HangHoa (MaHH, TenHH, DonVi, Gia, SLTon) VALUES (@Ma, @Ten, @DonVi, @Gia, 0)";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connStr))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Ma", ma);
+                    cmd.Parameters.AddWithValue("@Ten", ten);
+                    cmd.Parameters.AddWithValue("@DonVi", donvi);
+                    cmd.Parameters.AddWithValue("@Gia", gia);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    return true; // Thành công
+                }
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627) // Lỗi Trùng Khóa Chính (Primary Key)
+                    MessageBox.Show("Mã Hàng Hóa '" + ma + "' đã tồn tại. Vui lòng chọn mã khác.");
+                else
+                    MessageBox.Show("Lỗi CSDL khi tạo hàng mới: " + ex.Message);
+                return false; // Thất bại
+            }
+        }
+
+        /// <summary>
+        /// Logic trung tâm để thêm 1 dòng vào Giỏ hàng (lưới phải)
+        /// </summary>
+        private void ThemDongVaoGioHang(string maHH, string tenHH, int soLuong, decimal gia)
+        {
+            // Kiểm tra xem hàng đã có trong giỏ chưa
+            DataRow existingRow = dtGioHang.AsEnumerable().FirstOrDefault(r => r.Field<string>("MaHH") == maHH);
+
+            if (existingRow != null)
+            {
+                // Nếu có rồi -> Cập nhật số lượng
+                existingRow["SoLuong"] = existingRow.Field<int>("SoLuong") + soLuong;
+            }
+            else
+            {
+                // Nếu chưa có -> Thêm dòng mới
+                dtGioHang.Rows.Add(maHH, tenHH, soLuong, gia);
+            }
+
+            CapNhatTongTien();
+        }
+
+        /// <summary>
+        /// Tính và cập nhật Label Tổng tiền
+        /// </summary>
+        private void CapNhatTongTien()
+        {
+            object sumObject = dtGioHang.Compute("SUM(ThanhTien)", string.Empty);
+
+            if (sumObject != DBNull.Value)
+            {
+                lblTongTien.Text = "Tổng tiền: " + Convert.ToDecimal(sumObject).ToString("N0") + " VND";
+            }
+            else
+            {
+                lblTongTien.Text = "Tổng tiền: 0 VND";
             }
         }
     }
