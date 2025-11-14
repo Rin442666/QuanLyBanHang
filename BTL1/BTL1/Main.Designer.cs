@@ -38,17 +38,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbxChucNang = new System.Windows.Forms.GroupBox();
+            this.panel2 = new TransparentPanel();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblTen = new System.Windows.Forms.Label();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnLogIn = new System.Windows.Forms.Button();
             this.btnQLHDN = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnQLHDB = new System.Windows.Forms.Button();
             this.btnQLNV = new System.Windows.Forms.Button();
             this.btnQLKH = new System.Windows.Forms.Button();
             this.btnQLHH = new System.Windows.Forms.Button();
-            this.panel2 = new TransparentPanel();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.lblTen = new System.Windows.Forms.Label();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnLogIn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -70,7 +70,7 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel3.Controls.Add(this.lblTieuDeMain);
@@ -114,9 +114,9 @@
             this.label2.Location = new System.Drawing.Point(462, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 22);
+            this.label2.Size = new System.Drawing.Size(167, 22);
             this.label2.TabIndex = 4;
-            this.label2.Text = "SĐT: 0369.xxx.xxx";
+            this.label2.Text = "SĐT: 0369.188.366";
             // 
             // label4
             // 
@@ -167,8 +167,8 @@
             // 
             // gbxChucNang
             // 
-            this.gbxChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.gbxChucNang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxChucNang.BackgroundImage = global::BTL1.Properties.Resources.pngtree_shopping_mall_supermarket_selection_merchandise_poster_background_material_image_133225;
             this.gbxChucNang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -184,6 +184,60 @@
             this.gbxChucNang.Size = new System.Drawing.Size(1287, 596);
             this.gbxChucNang.TabIndex = 3;
             this.gbxChucNang.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.lblUserName);
+            this.panel2.Controls.Add(this.lblTen);
+            this.panel2.Controls.Add(this.btnLogOut);
+            this.panel2.Controls.Add(this.btnLogIn);
+            this.panel2.Location = new System.Drawing.Point(981, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(309, 66);
+            this.panel2.TabIndex = 8;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Location = new System.Drawing.Point(79, 23);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(0, 19);
+            this.lblUserName.TabIndex = 3;
+            // 
+            // lblTen
+            // 
+            this.lblTen.AutoSize = true;
+            this.lblTen.Location = new System.Drawing.Point(30, 23);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.Size = new System.Drawing.Size(43, 19);
+            this.lblTen.TabIndex = 2;
+            this.lblTen.Text = "Tên :";
+            this.lblTen.Visible = false;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Location = new System.Drawing.Point(189, 12);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(94, 40);
+            this.btnLogOut.TabIndex = 1;
+            this.btnLogOut.Text = "Đăng Xuất";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnLogIn
+            // 
+            this.btnLogIn.Location = new System.Drawing.Point(188, 12);
+            this.btnLogIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(94, 40);
+            this.btnLogIn.TabIndex = 0;
+            this.btnLogIn.Text = "Đăng Nhập";
+            this.btnLogIn.UseVisualStyleBackColor = true;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // btnQLHDN
             // 
@@ -231,7 +285,7 @@
             this.btnQLHDB.Name = "btnQLHDB";
             this.btnQLHDB.Size = new System.Drawing.Size(306, 48);
             this.btnQLHDB.TabIndex = 5;
-            this.btnQLHDB.Text = "Quản lý hóa đơn bán hàng";
+            this.btnQLHDB.Text = "Quản lý hóa đơn bán";
             this.btnQLHDB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLHDB.UseVisualStyleBackColor = true;
             this.btnQLHDB.Click += new System.EventHandler(this.btnQLHDB_Click);
@@ -293,60 +347,6 @@
             this.btnQLHH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQLHH.UseVisualStyleBackColor = true;
             this.btnQLHH.Click += new System.EventHandler(this.btnQLHH_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.lblUserName);
-            this.panel2.Controls.Add(this.lblTen);
-            this.panel2.Controls.Add(this.btnLogOut);
-            this.panel2.Controls.Add(this.btnLogIn);
-            this.panel2.Location = new System.Drawing.Point(981, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(309, 66);
-            this.panel2.TabIndex = 8;
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(79, 23);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(0, 19);
-            this.lblUserName.TabIndex = 3;
-            // 
-            // lblTen
-            // 
-            this.lblTen.AutoSize = true;
-            this.lblTen.Location = new System.Drawing.Point(30, 23);
-            this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(43, 19);
-            this.lblTen.TabIndex = 2;
-            this.lblTen.Text = "Tên :";
-            this.lblTen.Visible = false;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Location = new System.Drawing.Point(189, 12);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(94, 40);
-            this.btnLogOut.TabIndex = 1;
-            this.btnLogOut.Text = "Đăng Xuất";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnLogIn
-            // 
-            this.btnLogIn.Location = new System.Drawing.Point(188, 12);
-            this.btnLogIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Size = new System.Drawing.Size(94, 40);
-            this.btnLogIn.TabIndex = 0;
-            this.btnLogIn.Text = "Đăng Nhập";
-            this.btnLogIn.UseVisualStyleBackColor = true;
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // Main
             // 

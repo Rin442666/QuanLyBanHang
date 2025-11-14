@@ -164,10 +164,8 @@ namespace BTL1
                         cmdHD.Parameters.AddWithValue("@MaKH", txtMaKH.Text.Trim());
                         cmdHD.ExecuteNonQuery();
                     }
-
                     string queryCT = "INSERT INTO ChiTietHDB (MaHDB, MaHH, SLBan) VALUES (@MaHDB, @MaHH, @SLBan)";
                     string queryUpdateKho = "UPDATE HangHoa SET SLTon = SLTon - @SLBan WHERE MaHH = @MaHH";
-
                     foreach (DataRow row in dtGioHang.Rows)
                     {
                         int slBan = Convert.ToInt32(row["SoLuong"]);
